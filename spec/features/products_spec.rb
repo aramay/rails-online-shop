@@ -42,9 +42,11 @@ RSpec.feature "Products", type: :feature, js: true do
     end
   end
 
-  # describe "#delete" do
-  #   it "deletes a product" do
-  # end
+  describe "#delete" do
+    it "deletes a product" do
+
+    end
+  end
 
   # format price potential helper method
   #("%5.2f" % (@product.price.to_f / 1000))

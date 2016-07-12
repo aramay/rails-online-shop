@@ -35,7 +35,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     find_product.destroy
   end
 
