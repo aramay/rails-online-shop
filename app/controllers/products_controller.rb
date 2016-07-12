@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      redirect_to 'products/index'
+      redirect_to '/index'
     else
       redirect_to 'products/new'
     end
