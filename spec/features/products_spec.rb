@@ -22,13 +22,19 @@ RSpec.feature "Products", type: :feature, js: true do
   end
 
   describe "#create" do
-    let(:params) {{name: "Charles", description: "A hampster", price: 0, image: "http://www.kendavis.com/wordpress/wp-content/uploads/2013/08/Hamster.jpg"}}
-    it "should create a new product, increasing the count" do
-      expect{post :create, params}.to change{Product.count}.by(1)
-    end
-    it "responds with status 302" do
-      post :create, params
-      expect(response.status).to eq(302)
+    it "creates a new product" do
+      visit new_product_path
+      fill_in 'product[name]', with: product.name
+      fill_in 'product[description]', with: product.description
+      fill_in 'product[price]', with: product.price
+      fill_in 'product[image]', with: product.image
+      click_on('Save Product')
+      expect(page).to have_content(product.name)
     end
   end
+    # describe "#edit" do
+    # end
+
+    # describe "#delete" do
+    # end
 end
