@@ -28,13 +28,26 @@ RSpec.feature "Products", type: :feature, js: true do
       fill_in 'product[description]', with: product.description
       fill_in 'product[price]', with: product.price
       fill_in 'product[image]', with: product.image
-      click_on('Save Product')
+      click_on('Create Product')
       expect(page).to have_content(product.name)
     end
   end
-    # describe "#edit" do
-    # end
 
-    # describe "#delete" do
-    # end
+  describe "#edit" do
+    it "edits an existing product" do
+      visit edit_product_path(product)
+      fill_in 'product[name]', with: "Ted"
+      click_on('Update Product')
+      expect(page).to have_content("Ted")
+    end
+  end
+
+  describe "#delete" do
+    it "deletes a product" do
+
+    end
+  end
+
+  # format price potential helper method
+  #("%5.2f" % (@product.price.to_f / 1000))
 end

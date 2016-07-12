@@ -8,10 +8,14 @@ class ProductsController < ApplicationController
     find_product
   end
 
+  def new
+    @product = Product.new()
+  end
+
   def create
     @product = Product.new(product_params)
     if @product.save
-      redirect_to 'products/index'
+      redirect_to root_path
     else
       redirect_to 'products/new'
     end
@@ -31,7 +35,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     find_product.destroy
   end
 

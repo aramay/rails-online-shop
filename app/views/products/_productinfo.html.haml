@@ -1,8 +1,11 @@
-%label{for: "name"} Name:
-%input{name: "product[name]", type: "text", value: ""}/
-%label{for: "price"} Price:
-%input{name: "product[price]", type: "number", value: ""}/
-%label{for: "description"} Description:
-%input{name: "product[description]", type: "text", value: ""}/
-%label{for: "image"} Image(url):
-%input{name: "product[image]", type: "text", value: ""}/
+= form_for @product do |f|
+  =f.label :name
+  =f.text_field :name
+  =f.label :price
+  =f.text_field :price
+  =f.label :description
+  =f.text_field :description
+  =f.label :image
+  =f.text_field :image
+  = f.submit
+=link_to "Home", root_path

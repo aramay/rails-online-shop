@@ -1,6 +1,8 @@
+= link_to "Home", root_path
 =@product.name
 =@product.description
 =@product.price
 =image_tag("#{@product.image}")
 =link_to "Edit", edit_product_path(@product)
+= button_to "Delete", {id: @product.id }, method: :destroy, data: { confirm: "Are you sure?" }
 
