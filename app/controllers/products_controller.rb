@@ -9,13 +9,13 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = Product.new(name: params[:name], price: params[:price], description: params[:description], image: params[:image])
+    @product = Product.new()
   end
 
   def create
-    @product = Product.new(name: params[:name], price: params[:price], description: params[:description], image: params[:image])
+    @product = Product.new(product_params)
     if @product.save
-      redirect_to '/index'
+      redirect_to root_path
     else
       redirect_to 'products/new'
     end
