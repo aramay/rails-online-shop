@@ -1,4 +1,6 @@
 -@products.each do |p|
   #li= p.name
   #li= p.price
+  #li= p.description
+  #li= p.image
   = link_to image_tag("#{p.image}"), product_path(p)
