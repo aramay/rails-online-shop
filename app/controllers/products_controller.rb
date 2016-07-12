@@ -3,6 +3,10 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def show
+    @product = Product.find(params[:id])
+  end
+
   def create
     @product = Product.new(product_params)
     if @product.save
@@ -16,11 +20,6 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
-  def show
-    @product = Product.find(params[:id])
-  end
-
-
   def update
     @product = Product.find(params[:id])
     successful_save = @product.update(product_params)
@@ -32,7 +31,7 @@ class ProductsController < ApplicationController
   end
 
 private
-def product_params
-  params.require(:product).permit(:name, :price, :description, :image)
-end
+  def product_params
+    params.require(:product).permit(:name, :price, :description, :image)
+  end
 end
