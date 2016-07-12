@@ -1,6 +1,11 @@
+= link_to "New Product", new_product_path
 -@products.each do |p|
-  #li= p.name
-  #li= p.price
-  #li= p.description
+  #li Name:
+  #span= p.name
+  #li Price:
+  #span= p.price
+  #li Description:
+  #span= p.description
   #li= p.image
   = link_to image_tag("#{p.image}"), product_path(p)
+  = button_to "Delete", {id: p.id }, method: :delete, data: { confirm: "Are you sure?" }

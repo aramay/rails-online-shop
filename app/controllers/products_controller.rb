@@ -8,8 +8,12 @@ class ProductsController < ApplicationController
     find_product
   end
 
+  def new
+    @product = Product.new(name: params[:name], price: params[:price], description: params[:description], image: params[:image])
+  end
+
   def create
-    @product = Product.new(product_params)
+    @product = Product.new(name: params[:name], price: params[:price], description: params[:description], image: params[:image])
     if @product.save
       redirect_to '/index'
     else
