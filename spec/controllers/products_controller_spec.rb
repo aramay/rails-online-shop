@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ProductsController, type: :controller do
-  let(:product) { Product.create(name: "Charles", description: "A hampster", price: 0, image: "http://www.kendavis.com/wordpress/wp-content/uploads/2013/08/Hamster.jpg") }
+  let(:product) { Product.create(name: "Charles", description: "A hampster", price: 0, quantity: 1, image: "http://www.kendavis.com/wordpress/wp-content/uploads/2013/08/Hamster.jpg") }
   context "GET index" do
     before do
       get :index

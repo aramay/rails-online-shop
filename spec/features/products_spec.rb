@@ -1,14 +1,14 @@
 require 'rails_helper'
 
 RSpec.feature "Products", type: :feature, js: true do
-  let!(:product) { Product.create(name: "Charles", description: "A hampster", price: 0, image: "http://www.kendavis.com/wordpress/wp-content/uploads/2013/08/Hamster.jpg") }
+  let!(:product) { Product.create(name: "Charles", description: "A hampster", price: 0, quantity: 1, image: "http://www.kendavis.com/wordpress/wp-content/uploads/2013/08/Hamster.jpg") }
   describe "#index" do
-    it "should have a name, price, description, image" do
+    it "should have a name, price, description, quantity, image" do
       visit root_path
       expect(page).to have_content(product.name)
       expect(page).to have_content(product.price)
       expect(page).to have_content(product.description)
-      expect(page).to have_content(product.image)
+      expect(page).to have_content(product.quantity)
     end
   end
 
@@ -18,6 +18,7 @@ RSpec.feature "Products", type: :feature, js: true do
       expect(page).to have_content(product.name)
       expect(page).to have_content(product.price)
       expect(page).to have_content(product.description)
+      expect(page).to have_content(product.quantity)
     end
   end
 
@@ -27,6 +28,7 @@ RSpec.feature "Products", type: :feature, js: true do
       fill_in 'product[name]', with: product.name
       fill_in 'product[description]', with: product.description
       fill_in 'product[price]', with: product.price
+      fill_in 'product[quantity]', with: product.quantity
       fill_in 'product[image]', with: product.image
       click_on('Create Product')
       expect(page).to have_content(product.name)
@@ -42,11 +44,10 @@ RSpec.feature "Products", type: :feature, js: true do
     end
   end
 
-  describe "#delete" do
-    it "deletes a product" do
-
-    end
-  end
+  # describe "#delete" do
+  #   it "deletes a product" do
+  #   end
+  # end
 
   # format price potential helper method
   #("%5.2f" % (@product.price.to_f / 1000))
