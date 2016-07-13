@@ -14,16 +14,14 @@ RSpec.describe ProductsController, type: :controller do
     before do
       get :new
     end
-    it { is_expected.to respond_with :ok}
-    it { is_expected.to render_template :new}
+    it { is_expected.to respond_with(401)}
   end
 
   context "GET edit" do
     before do
       get :edit, :id => product.id
     end
-    it { is_expected.to respond_with :ok}
-    it { is_expected.to render_template :edit}
+    it { is_expected.to respond_with(401)}
   end
 
   context "GET show" do
