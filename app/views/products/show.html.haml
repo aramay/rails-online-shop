@@ -2,7 +2,7 @@
 #li Name:
 #span= @product.name
 #li Price:
-#span= @product.price.round(2)
+#span= number_to_currency(@product.price)
 #li Description:
 #span= @product.description
 #li Quantity:
