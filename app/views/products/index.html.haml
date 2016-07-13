@@ -1,12 +1,13 @@
 = link_to "New Product", new_product_path
 -@products.each do |p|
+  #item
   #li Name:
   #span= p.name
+  = link_to image_tag("#{p.image}"), product_path(p)
   #li Price:
   #span= number_to_currency(p.price)
   #li Description:
   #span= p.description
   #li Quantity:
   #span= p.quantity
-  = link_to image_tag("#{p.image}"), product_path(p)
 

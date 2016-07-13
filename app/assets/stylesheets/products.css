@@ -3,4 +3,8 @@ img {
   height: 150px;
 }
 
+#item {
+  border: 1px solid black;
+}
+
 
