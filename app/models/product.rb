@@ -5,4 +5,7 @@ class Product < ActiveRecord::Base
   validates :image, presence: true
   validates :quantity, presence: true
   validates :category_id, presence: true
+
+  belongs_to :category
+  has_many :categories
 end

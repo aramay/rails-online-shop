@@ -5,12 +5,8 @@ Product.destroy_all
 User.create("username":"Tom", "email":"tom@tom.com", "password":"tomtom", "admin": false)
 User.create("username":"Tim", "email":"tim@tim.com", "password":"timtim", "admin": true)
 
-Category.create("name":"Hampsters", "product_id": 2)
-Category.create("name":"Hampsters", "product_id": 3)
-Category.create("name":"Hampsters", "product_id": 4)
-Category.create("name":"Hampsters", "product_id": 5)
-Category.create("name":"Hampsters", "product_id": 6)
-Category.create("name":"Cat", "product_id": 1)
+Category.create("name":"Hampsters")
+Category.create("name":"Cats")
 
 Product.create("name":"James","description":"Not a hampster.","image":"http://www.kongsbergvet.no/uploads/6/1/3/4/6134802/299713301.jpg","price":20.99,"quantity":2, "category_id": 2)
 Product.create("name":"Frank","description":"Number 5 guy on campus","image":"https://photosfine.files.wordpress.com/2012/04/hamster-white-background-5.jpg","price":6.88,"quantity":30, "category_id": 1)
