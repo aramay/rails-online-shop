@@ -1,13 +1,24 @@
-= link_to "New Product", new_product_path
+-if flash[:success]
+  .alert.alert-info
+    %p= flash[:success]
+-if flash[:danger]
+  .alert.alert-danger
+    %p= flash[:danger]
+
 -@products.each do |p|
-  #item
-  #li Name:
-  #span= p.name
-  = link_to image_tag("#{p.image}"), product_path(p)
-  #li Price:
-  #span= number_to_currency(p.price)
-  #li Description:
-  #span= p.description
-  #li Quantity:
-  #span= p.quantity
+  .col-md-4
+    #item
+      #li
+        %h3
+        #span= p.name
+        = link_to image_tag("#{p.image}"), product_path(p)
+      #li
+        %strong Price:
+        #span= number_to_currency(p.price)
+      #li
+        %strong Description:
+        #span= p.description
+      #li
+        %strong Quantity:
+        #span= p.quantity
 

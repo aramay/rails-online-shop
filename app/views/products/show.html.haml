@@ -1,13 +1,18 @@
 =link_to "Home", root_path
-#li Name:
-#span= @product.name
+#li
+  %h3
+    %strong
+      #span= @product.name
 =image_tag("#{@product.image}")
-#li Price:
+#li
+  %strong Price:
 #span= number_to_currency(@product.price)
-#li Description:
+#li
+  %strong Description:
 #span= @product.description
-#li Quantity:
+#li
+  %strong Quantity:
 #span= @product.quantity
-=link_to "Edit", edit_product_path(@product)
-=button_to "Delete", {id: @product.id }, method: :delete, action: :destroy, data: { confirm: "Are you sure?" }
+-# =link_to "Edit", edit_product_path(@product)
+-# =button_to "Delete", {id: @product.id }, method: :delete, action: :destroy, data: { confirm: "Are you sure?" }
 

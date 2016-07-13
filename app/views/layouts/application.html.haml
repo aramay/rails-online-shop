@@ -1,10 +1,39 @@
 !!!
-%html
+%html{:lang => "en"}
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Shoppe
-    = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
-    = csrf_meta_tags
+    %meta{:charset => "utf-8"}
+      %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+        %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+          %meta{:content => "", :name => "description"}
+            %meta{:content => "", :name => "author"}
+              %link{:href => "../../favicon.ico", :rel => "icon"}
+                %title SLAMAZON!
+                = stylesheet_link_tag    'application', media: 'all'
   %body
-    = yield
+    %nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          %a.navbar-brand{:href => "/"} SLAMAZON
+        #navbar.navbar-collapse.collapse
+          //%form.navbar-form.navbar-right
+          //  .form-group
+          //    %input.form-control{:placeholder => "Email", :type => "text"}
+          //  .form-group
+          //    %input.form-control{:placeholder => "Password", :type => "password"}
+          //  %button.btn.btn-success{:type => "submit"} Sign in
+        / /.navbar-collapse
+    / Main jumbotron for a primary marketing message or call to action
+    .jumbotron
+      .container
+        %h1
+          %a{:href => "/"} SLAMAZON!
+    .container
+      .row
+        = yield
+      %hr
+        %footer
+          %p &copy; 2016 SLAMAZON!, Inc.
+    / Placed at the end of the document so the pages load faster
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
+    :javascript
+      window.jQuery || document.write('<\/script>')
