@@ -4,5 +4,5 @@ class Product < ActiveRecord::Base
   validates :price, presence: true
   validates :image, presence: true
   validates :quantity, presence: true
-  validate :category_id, presence: true
+  validates :category_id, presence: true
 end

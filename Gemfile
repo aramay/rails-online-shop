@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'rails_12factor', group: :production
 gem 'rails_admin'
+gem 'bcrypt'
 
 group :development, :test do
   gem 'pry-rails'

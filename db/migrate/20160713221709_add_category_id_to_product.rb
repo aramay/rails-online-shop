@@ -1,7 +1,9 @@
 class AddCategoryIdToProduct < ActiveRecord::Migration
-  def change
-    add_column :products do |t|
-      t.integer :category_id, null: false
-    end
+  def up
+    add_column :products, :category_id, :integer
+  end
+
+  def down
+    remove_column :products, :category_id, :integer
   end
 end
