@@ -1,0 +1,39 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+.col-md-4 {
+  margin: 5px;
+  margin-left: 8px;
+  background-color: white;
+  padding: 5px;
+  width: 32%;
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  background-color: #EEEEEE;
+  padding: 5px;
+}
+
+a, a:hover {
+  color: #FD9901;
+}
+
+.alert-danger {
+  background-color: #FD9901;
+  color: white;
+  text-align: center;
+}
+
+.alert-info {
+  text-align: center;
+}

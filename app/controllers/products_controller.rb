@@ -1,7 +1,14 @@
 class ProductsController < ApplicationController
+  http_basic_authenticate_with name: "admin", password: "secret", except: [:index, :show]
   before_action :find_product, only: [:show, :edit, :update, :destroy]
+
   def index
     @products = Product.all
+      if @products
+        flash[:success] = "These cute babies need a home!"
+      else
+        flash[:danger] = "No more pets! Check back soon!"
+      end
   end
 
   def show
