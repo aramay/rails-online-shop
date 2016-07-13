@@ -9,6 +9,7 @@ gem 'thin'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'rails_12factor', group: :production
+gem 'rails_admin'
 
 group :development, :test do
   gem 'pry-rails'
@@ -23,6 +24,4 @@ group :development, :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
-  gem 'rails_admin'
 end
-
