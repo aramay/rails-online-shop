@@ -9,6 +9,10 @@ img {
   height: 150px;
 }
 
+.jumbotron {
+  background-color: #D9EDF7;
+}
+
 .col-md-4 {
   margin: 5px;
   margin-left: 8px;
@@ -36,4 +40,6 @@ a, a:hover {
 
 .alert-info {
   text-align: center;
+  background-color: #F0AD4E;
+  color: black;
 }

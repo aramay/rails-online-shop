@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  http_basic_authenticate_with name: "admin", password: "secret", except: [:index, :show]
+  before_action :authenticate_admin, except: [:show, :index]
   before_action :find_product, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -48,6 +48,14 @@ class ProductsController < ApplicationController
   end
 
 private
+  def authenticate_admin
+    if current_user.admin
+      redirect_to rails_admin
+    else
+      redirect_to root_path
+    end
+  end
+
   def product_params
     params.require(:product).permit(:name, :price, :description, :quantity, :image)
   end
