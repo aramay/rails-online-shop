@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
       #   session[:user_id] = @user.id
       #   redirect_to '/admin'
       if @user && @user.authenticate(password)
-        SignupMailer.welcome_email(@user).deliver
         session[:user_id] = @user.id
         flash[:success] = "You're logged in!"
         redirect_to root_path
