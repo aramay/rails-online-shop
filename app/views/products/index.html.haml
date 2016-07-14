@@ -1,7 +1,7 @@
 -if flash[:success]
   .alert.alert-info
     %p= flash[:success]
--if flash[:danger]
+-elsif flash[:danger]
   .alert.alert-danger
     %p= flash[:danger]
 

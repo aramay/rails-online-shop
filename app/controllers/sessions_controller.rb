@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
         redirect_to '/admin'
       elsif @user && @user.authenticate(password)
         session[:user_id] = @user.id
+        flash[:success] = "You're logged in!"
         redirect_to root_path
       else
         redirect_to root_path
