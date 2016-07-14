@@ -5,12 +5,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    p @user
     if @user.save
-      p @user
+      SignupMailer.welcome_email(@user).deliver
       redirect_to root_path
     else
-      p @user
       redirect_to new_user_path
     end
   end
