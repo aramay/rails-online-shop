@@ -18,7 +18,8 @@
           %a.navbar-brand{href: "/"} SLAMAZON
         #navbar.navbar-collapse.collapse
           - if current_user
-            =form_tag('/sessions/#{current_user.id}', method: "DELETE", class: "navbar-form navbar-right") do
+            -x = current_user.id.to_s
+            =form_tag('/sessions/' + x, method: "DELETE", class: "navbar-form navbar-right") do
               .form-group
                 =submit_tag "Logout", class: "btn btn-warning"
           - else

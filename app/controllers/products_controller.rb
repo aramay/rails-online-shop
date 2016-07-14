@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @categories = Category.all
       if @products
         flash[:success] = "These cute babies need a home!"
       else
