@@ -19,11 +19,11 @@ URL: https://slamazon.herokuapp.com/
 - User can view products without authentication :heavy_check_mark:
 
 ### MVP Iteration 3
-- User/Client can login using session-based authentication
+- User/Client can login using session-based authentication :heavy_check_mark:
 - User receives welcome email after signing up
-- Client can view categories of products
-- Client can view products by category
-- Product show page includes categories
+- Client can view categories of products :heavy_check_mark:
+- Client can view products by category :heavy_check_mark:
+- Product show page includes categories :heavy_check_mark:
 
 ### MOCK UPS
 
