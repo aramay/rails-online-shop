@@ -21,4 +21,7 @@
       #li
         %strong Quantity:
         #span= p.quantity
+      #li
+        %strong Category:
+        #span= Category.find(p.category_id).name
 
