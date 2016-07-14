@@ -4,6 +4,14 @@ URL: https://slamazon.herokuapp.com/
 ## Description
 - Rails-based Online Shop
 
+### MOCK UPS
+
+<img src="http://i.imgur.com/jnFu4eLg.jpg" alt="mock ups" width="400" height="500">
+
+### SCHEMA
+
+<img src="http://i.imgur.com/SkiyIsV.png" alt="schema" width="300" height="300">
+
 ### MVP Iteration 1
 - Client can view products :heavy_check_mark:
 - Client can enter products :heavy_check_mark:
@@ -24,12 +32,3 @@ URL: https://slamazon.herokuapp.com/
 - Client can view categories of products :heavy_check_mark:
 - Client can view products by category :heavy_check_mark:
 - Product show page includes categories :heavy_check_mark:
-
-### MOCK UPS
-
-![mock ups](http://i.imgur.com/jnFu4eLg.jpg)
-
-### SCHEMA
-
-![schema](http://i.imgur.com/SkiyIsV.png)
-
