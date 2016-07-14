@@ -4,11 +4,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-      if @products
-        flash[:success] = "These cute babies need a home!"
-      else
-        flash[:danger] = "No more pets! Check back soon!"
-      end
+    @categories = Category.all
   end
 
   def show

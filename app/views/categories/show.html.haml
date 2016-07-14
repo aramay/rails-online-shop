@@ -1,0 +1,43 @@
+.col-md-12
+  =link_to "Home", root_path, {class: "btn btn-info"}
+
+-if @product != nil
+  .col-md-12
+    #item
+      #li
+        %h3
+        #span= @product.name
+        =link_to image_tag(@product.image), product_path(@product)
+      #li
+        %strong Price:
+        #span= number_to_currency(@product.price)
+      #li
+        %strong Description:
+        #span= @product.description
+      #li
+        %strong Quantity:
+        #span= @product.quantity
+      #li
+        %strong Category:
+        #span= Category.find(@product.category_id).name
+
+- if @products != nil
+  -@products.each do |p|
+    .col-md-4
+      #item
+        #li
+          %h3
+          #span= p.name
+          =link_to image_tag("#{p.image}"), product_path(p)
+        #li
+          %strong Price:
+          #span= number_to_currency(p.price)
+        #li
+          %strong Description:
+          #span= p.description
+        #li
+          %strong Quantity:
+          #span= p.quantity
+        #li
+          %strong Category:
+          #span= Category.find(p.category_id).name

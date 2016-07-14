@@ -3,13 +3,17 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(email: params[:email])
-    password = params[:password]
+    @user = User.find_by(email: params["Email"])
+    password = params["Password"]
+      # if @user.admin && @user.authenticate(password)
+      #   session[:user_id] = @user.id
+      #   redirect_to '/admin'
       if @user && @user.authenticate(password)
         session[:user_id] = @user.id
-        redirect_to 'google.com'
+        flash[:success] = "You're logged in!"
+        redirect_to root_path
       else
-        redirect_to 'bing.com'
+        redirect_to root_path
       end
   end
 

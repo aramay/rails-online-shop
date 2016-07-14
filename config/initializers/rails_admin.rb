@@ -5,6 +5,20 @@ RailsAdmin.config do |config|
     end
   end
 
+  # config.current_user do
+  #   user = User.find(session[:user_id])
+  #   if user
+  #     user
+  #   else
+  #     flash[:danger] = "You need to login to access"
+  #     redirect_to root_path
+  #   end
+  # end
+
+  # config.authorize_with do
+  #   redirect_to root_path unless current_user.try(:admin?)
+  # end
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory

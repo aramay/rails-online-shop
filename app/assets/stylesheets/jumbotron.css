@@ -13,6 +13,18 @@ img {
   background-color: #D9EDF7;
 }
 
+.btn-info {
+  background-color: #D9EDF7;
+  color: black;
+  margin: 2px;
+}
+
+.col-md-12 {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
 .col-md-4 {
   margin: 5px;
   margin-left: 8px;

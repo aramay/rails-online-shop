@@ -1,9 +1,13 @@
 -if flash[:success]
   .alert.alert-info
     %p= flash[:success]
--if flash[:danger]
+-elsif flash[:danger]
   .alert.alert-danger
     %p= flash[:danger]
+
+.col-md-12
+  -@categories.each do |cat|
+    =link_to cat.name.capitalize, category_path(cat), {class: "btn btn-info"}
 
 -@products.each do |p|
   .col-md-4
