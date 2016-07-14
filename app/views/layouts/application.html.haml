@@ -30,6 +30,8 @@
                 =password_field_tag "Password", "Password", class: "form-control"
               .form-group
                 =submit_tag "Login", class: "btn btn-warning"
+              .form-group
+                =link_to "Sign Up", new_user_path, class: "btn btn-warning"
         .navbar-collapse
     / Main jumbotron for a primary marketing message or call to action
     .jumbotron
