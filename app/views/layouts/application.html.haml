@@ -11,6 +11,7 @@
                 %title SLAMAZON!
                 = stylesheet_link_tag 'application', media: 'all'
                 = csrf_meta_tags
+                = javascript_include_tag 'application'
   %body
     %nav.navbar.navbar-inverse.navbar-fixed-top
       .container
@@ -18,11 +19,15 @@
           %a.navbar-brand{href: "/"} HAMZON
           %ul.nav.navbar-nav
           - if user_signed_in?
-            %li= link_to  "Sign Out", destroy_user_session_path, method: :delete
+            %li= link_to  "Sign Out", destroy_user_session_path, :method => :get
           - else
 
             %li= link_to "Sign Up", new_user_registration_path
             %li= link_to "Log In", new_user_session_path
+
+          / # - if user_signed_in?
+          / #   - if current_user.admin == true
+          / #     %li= link_to "Log In", rails_admin
 
 
         .navbar-collapse
