@@ -40,6 +40,8 @@ GEM
     archive-zip (0.7.0)
       io-like (~> 0.3.0)
     arel (6.0.3)
+    autoprefixer-rails (6.3.7)
+      execjs
     bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -47,6 +49,9 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.2)
     byebug (8.2.2)
     capybara (2.7.1)
@@ -73,6 +78,13 @@ GEM
     daemons (1.2.3)
     database_cleaner (1.5.3)
     debug_inspector (0.0.2)
+    devise (3.5.10)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     dotenv (2.1.1)
     dotenv-rails (2.1.1)
@@ -129,6 +141,7 @@ GEM
     nested_form (0.3.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    orm_adapter (0.5.0)
     pg (0.18.4)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -187,6 +200,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.5.0)
     remotipart (1.2.1)
+    responders (2.2.0)
+      railties (>= 4.2.0, < 5.1)
     rspec-core (3.4.2)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
@@ -246,6 +261,8 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.6)
+      rack (>= 1.0)
     websocket (1.2.3)
     xpath (2.0.0)
       nokogiri (~> 1.3)
@@ -257,10 +274,12 @@ DEPENDENCIES
   bcrypt
   better_errors
   binding_of_caller
+  bootstrap-sass (~> 3.3.6)
   byebug
   capybara
   chromedriver-helper
   database_cleaner
+  devise (~> 3.5, >= 3.5.6)
   dotenv-rails
   factory_girl_rails
   faker
@@ -272,10 +291,14 @@ DEPENDENCIES
   rails_12factor
   rails_admin
   rspec-rails
+  sass-rails (~> 5.0, >= 5.0.4)
   selenium-webdriver
   shoulda
   thin
   uglifier
+
+RUBY VERSION
+   ruby 2.2.5p319
 
 BUNDLED WITH
    1.12.5
