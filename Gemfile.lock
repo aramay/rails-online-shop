@@ -40,6 +40,8 @@ GEM
     archive-zip (0.7.0)
       io-like (~> 0.3.0)
     arel (6.0.3)
+    autoprefixer-rails (6.3.7)
+      execjs
     bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -47,6 +49,9 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.2)
     byebug (8.2.2)
     capybara (2.7.1)
@@ -269,11 +274,12 @@ DEPENDENCIES
   bcrypt
   better_errors
   binding_of_caller
+  bootstrap-sass (~> 3.3.6)
   byebug
   capybara
   chromedriver-helper
   database_cleaner
-  devise
+  devise (~> 3.5, >= 3.5.6)
   dotenv-rails
   factory_girl_rails
   faker
@@ -285,6 +291,7 @@ DEPENDENCIES
   rails_12factor
   rails_admin
   rspec-rails
+  sass-rails (~> 5.0, >= 5.0.4)
   selenium-webdriver
   shoulda
   thin
