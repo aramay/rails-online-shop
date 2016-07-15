@@ -10,7 +10,6 @@ FactoryGirl.define do
   factory :user do
     email {"tom@tom.com"}
     password {"tomtomtom"}
-    admin {true}
   end
 
   factory :product do
