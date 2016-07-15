@@ -15,7 +15,10 @@ gem 'haml-rails'
 gem 'rails_12factor', group: :production
 gem 'rails_admin'
 gem 'bcrypt'
+#devise - user authentication
 gem 'devise'
+#rails admin
+gem 'rails_admin'
 
 group :development, :test do
   gem 'pry-rails'
