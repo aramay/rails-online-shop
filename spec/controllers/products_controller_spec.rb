@@ -14,14 +14,14 @@ RSpec.describe ProductsController, type: :controller do
     before do
       get :new
     end
-    it { is_expected.to respond_with(401)}
+    it { is_expected.to respond_with(200)}
   end
 
   context "GET edit" do
     before do
       get :edit, :id => product.id
     end
-    it { is_expected.to respond_with(401)}
+    it { is_expected.to respond_with(200)}
   end
 
   context "GET show" do
@@ -33,5 +33,3 @@ RSpec.describe ProductsController, type: :controller do
   end
 end
 
-# it { is_expected.to redirect_to products_path}
-# for post (not get)
