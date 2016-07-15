@@ -13,8 +13,8 @@ gem 'sass-rails', '~> 5.0', '>= 5.0.4'
 gem 'uglifier'
 gem 'thin'
 
-#dot-env
-gem 'dotenv-rails'
+# #dot-env
+# gem 'dotenv-rails'
 
 gem 'jquery-rails'
 gem 'haml-rails'
