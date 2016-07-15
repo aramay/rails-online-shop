@@ -4,11 +4,7 @@ class Product < ActiveRecord::Base
   validates :price, presence: true
   validates :image, presence: true
   validates :quantity, presence: true
-  validates :category_id, presence: true
 
-  has_many :category_products
-  has_many :categories, through: :category_products
-
-  belongs_to :category
+  has_and_belongs_to_many :categories
 
 end
