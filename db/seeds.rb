@@ -1,6 +1,7 @@
 User.destroy_all
 Category.destroy_all
 Product.destroy_all
+OrderStatus.destroy_all
 
 # User.create("username":"Tom", "email":"tom@tom.com", "password":"tomtomtom", "admin": false)
 User.create("email":"tom@tom.com", "password":"tomtomtom", "admin": false)
