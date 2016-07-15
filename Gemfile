@@ -13,6 +13,9 @@ gem 'sass-rails', '~> 5.0', '>= 5.0.4'
 gem 'uglifier'
 gem 'thin'
 
+#dot-env
+gem 'dotenv-rails'
+
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'rails_12factor', group: :production
