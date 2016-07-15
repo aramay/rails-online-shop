@@ -1,10 +1,12 @@
 FactoryGirl.define do
   factory :category_product do
+    product_id {1}
+    category_id {1}
 
   end
 
   factory :category do
-
+    name { Faker::Beer.name }
   end
 
   factory :user do
