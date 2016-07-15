@@ -1,5 +1,5 @@
-## Slamazon
-URL: https://slamazon.herokuapp.com/
+## Hamazon
+URL: https://hamazon-dbc-nighthawks-16.herokuapp.com/
 
 ## Description
 - Rails-based Online Shop
@@ -32,3 +32,7 @@ URL: https://slamazon.herokuapp.com/
 - Client can view categories of products :heavy_check_mark:
 - Client can view products by category :heavy_check_mark:
 - Product show page includes categories :heavy_check_mark:
+
+### Iteration 3.1
+- New development team
+- Chris, Abid, Paul, Michael
