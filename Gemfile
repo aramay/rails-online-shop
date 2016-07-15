@@ -6,6 +6,9 @@ gem 'dotenv-rails', :groups => [:development, :test, :production]
 
 gem 'rails'
 gem 'pg'
+#bootstrap
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sass-rails', '~> 5.0', '>= 5.0.4'
 
 gem 'uglifier'
 gem 'thin'
@@ -13,12 +16,13 @@ gem 'thin'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'rails_12factor', group: :production
-gem 'rails_admin'
+
 gem 'bcrypt'
 #devise - user authentication
-gem 'devise'
+gem 'devise', '~> 3.5', '>= 3.5.6'
 #rails admin
 gem 'rails_admin'
+
 
 group :development, :test do
   gem 'pry-rails'
