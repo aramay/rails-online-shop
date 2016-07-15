@@ -15,7 +15,7 @@
     %nav.navbar.navbar-inverse.navbar-fixed-top
       .container
         .navbar-header
-          %a.navbar-brand{href: "/"} SLAMAZON
+          %a.navbar-brand{href: "/"} HAMZON
         #navbar.navbar-collapse.collapse
           - if current_user
             -x = current_user.id.to_s
@@ -36,14 +36,13 @@
     / Main jumbotron for a primary marketing message or call to action
     .jumbotron
       .container
-        %h1
-          %a{href: "/"} SLAMAZON!
+        %h1  HAMAZON
     .container
       .row
         = yield
       %hr
         %footer
-          %p &copy; 2016 SLAMAZON!, Inc.
+          %p &copy; 2016 HAMAZON, Inc.
     / Placed at the end of the document so the pages load faster
     -# %script{src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
     -# :javascript
