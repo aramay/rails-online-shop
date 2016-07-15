@@ -16,22 +16,7 @@
       .container
         .navbar-header
           %a.navbar-brand{href: "/"} HAMZON
-        #navbar.navbar-collapse.collapse
-          - if current_user
-            -x = current_user.id.to_s
-            =form_tag('/sessions/' + x, method: "DELETE", class: "navbar-form navbar-right") do
-              .form-group
-                =submit_tag "Logout", class: "btn btn-warning"
-          - else
-            =form_tag('/sessions', method: "POST", class: "navbar-form navbar-right") do
-              .form-group
-                =text_field_tag "Email", "Email",  class: "form-control"
-              .form-group
-                =password_field_tag "Password", "Password", class: "form-control"
-              .form-group
-                =submit_tag "Login", class: "btn btn-warning"
-              .form-group
-                =link_to "Sign Up", new_user_path, class: "btn btn-warning"
+
         .navbar-collapse
     / Main jumbotron for a primary marketing message or call to action
     .jumbotron
