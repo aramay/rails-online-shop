@@ -14,6 +14,7 @@ gem 'haml-rails'
 gem 'rails_12factor', group: :production
 gem 'rails_admin'
 gem 'bcrypt'
+gem 'devise'
 
 group :development, :test do
   gem 'pry-rails'
