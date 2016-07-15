@@ -18,6 +18,9 @@
         .navbar-header
           %a.navbar-brand{href: "/"} HAMZON
           %ul.nav.navbar-nav
+
+          %li= ENV['USERNAME']
+
           - if user_signed_in?
             %li= link_to  "Sign Out", destroy_user_session_path, :method => :get
           - else
@@ -32,6 +35,8 @@
 
         .navbar-collapse
     / Main jumbotron for a primary marketing message or call to action
+    %p.notice= notice
+    %p.alert= alert
     .jumbotron
       .container
         %h1  HAMAZON

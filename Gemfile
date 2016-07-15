@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.2.5'
+# ruby '2.2.5'
+ruby '2.2.1'
 
 gem 'dotenv-rails', :groups => [:development, :test, :production]
 
@@ -11,6 +12,9 @@ gem 'sass-rails', '~> 5.0', '>= 5.0.4'
 
 gem 'uglifier'
 gem 'thin'
+
+# #dot-env
+# gem 'dotenv-rails'
 
 gem 'jquery-rails'
 gem 'haml-rails'
