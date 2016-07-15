@@ -8,7 +8,7 @@
             %meta{content: "", name: "author"}
               %link{href: "../../favicon.ico", rel: "icon"}
               %link{href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel: "stylesheet"}
-                %title SLAMAZON!
+                %title HAMAZON!
                 = stylesheet_link_tag 'application', media: 'all'
                 = csrf_meta_tags
                 = javascript_include_tag 'application'
@@ -40,6 +40,8 @@
     .jumbotron
       .container
         %h1  HAMAZON
+        %h1 
+          = render partial: 'layouts/cart_text'
     .container
       .row
         = yield
