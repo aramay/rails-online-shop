@@ -1,7 +1,10 @@
 class Category < ActiveRecord::Base
   validates :name, presence: true
 
-  has_and_belongs_to_many :products
+  has_many :category_products
+  has_many :products, through: :category_products
+
+  belongs_to :product
 
 
 end
