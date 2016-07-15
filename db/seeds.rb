@@ -2,8 +2,10 @@ User.destroy_all
 Category.destroy_all
 Product.destroy_all
 
-User.create("username":"Tom", "email":"tom@tom.com", "password":"tomtom", "admin": false)
-User.create("username":"Tim", "email":"tim@tim.com", "password":"timtim", "admin": true)
+# User.create("username":"Tom", "email":"tom@tom.com", "password":"tomtomtom", "admin": false)
+User.create("email":"tom@tom.com", "password":"tomtomtom", "admin": false)
+# User.create("username":"Tim", "email":"tim@tim.com", "password":"timtimtim", "admin": true)
+User.create("email":"tim@tim.com", "password":"timtimtim", "admin": true)
 
 Category.create("name":"Hampsters")
 Category.create("name":"Cats")
