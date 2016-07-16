@@ -22,6 +22,23 @@ RSpec.feature "Products", type: :feature, js: true do
     end
   end
 
+  describe "#admin" do
+    before(:each) do
+      @admin = User.create("email":"tim@tim.com", "password":"timtimtim", "admin": true)
+      visit 'users/sign_in'
+      fill_in 'user[email]', with: @admin.email
+      fill_in 'user[password]', with: @admin.password
+      click_button 'Log in'
+    end
+
+    it "should log the admin in" do
+      visit "/admin"
+      expect(page).to have_content("Site Administration")
+    end
+
+
+  end
+
   # describe "#create" do
   #   it "creates a new product" do
   #     visit new_product_path
