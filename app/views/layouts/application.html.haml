@@ -8,7 +8,7 @@
             %meta{content: "", name: "author"}
               %link{href: "../../favicon.ico", rel: "icon"}
               %link{href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel: "stylesheet"}
-                %title SLAMAZON!
+                %title HAMAZON!
                 = stylesheet_link_tag 'application', media: 'all'
                 = csrf_meta_tags
                 = javascript_include_tag 'application'
@@ -18,6 +18,9 @@
         .navbar-header
           %a.navbar-brand{href: "/"} HAMZON
           %ul.nav.navbar-nav
+
+          %li= ENV['USERNAME']
+
           - if user_signed_in?
             %li= link_to  "Sign Out", destroy_user_session_path, :method => :get
           - else
@@ -32,9 +35,13 @@
 
         .navbar-collapse
     / Main jumbotron for a primary marketing message or call to action
+    %p.notice= notice
+    %p.alert= alert
     .jumbotron
       .container
         %h1  HAMAZON
+        %h1 
+          = render partial: 'layouts/cart_text'
     .container
       .row
         = yield

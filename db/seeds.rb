@@ -1,6 +1,7 @@
 User.destroy_all
 Category.destroy_all
 Product.destroy_all
+OrderStatus.destroy_all
 
 # User.create("username":"Tom", "email":"tom@tom.com", "password":"tomtomtom", "admin": false)
 User.create("email":"tom@tom.com", "password":"tomtomtom", "admin": false)
@@ -24,3 +25,8 @@ CategoryProduct.create(category_id:1, product_id:5)
 CategoryProduct.create(category_id:1, product_id:6)
 CategoryProduct.create(category_id:2, product_id:1)
 CategoryProduct.create(category_id:1, product_id:1)
+
+OrderStatus.create(id: 1, name: "In Progress")
+OrderStatus.create(id: 2, name: "Placed")
+OrderStatus.create(id: 3, name: "Shipped")
+OrderStatus.create(id: 4, name: "Cancelled")

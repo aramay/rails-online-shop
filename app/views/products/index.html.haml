@@ -25,6 +25,8 @@
       #li
         %strong Quantity:
         #span= p.quantity
+      #li
+        = render :partial => 'product_row', :locals => { :product => p, :order_item => @order_item }
       -# #li
       -#   %strong Category:
       -#   #span= Category.find(p.category_id).name
