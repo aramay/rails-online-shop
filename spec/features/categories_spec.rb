@@ -1,6 +1,7 @@
+RSpec.feature "categories", type: :feature, js: true do
 require 'rails_helper'
 
-RSpec.feature "Products", type: :feature, js: true do
+RSpec.feature "categories", type: :feature, js: true do
   let!(:product) { Product.create(name: "Charles", description: "A hampster", price: 0, quantity: 1, image: "http://www.kendavis.com/wordpress/wp-content/uploads/2013/08/Hamster.jpg") }
   describe "#index" do
     it "should have a name, price, description, quantity, image" do
@@ -38,12 +39,12 @@ RSpec.feature "Products", type: :feature, js: true do
       expect(page).to have_content("Site Administration")
     end
 
-    it "should access the products rotue" do
+    it "should access the categories rotue" do
       visit "/admin/product"
-      expect(page).to have_content("List of Products")
+      expect(page).to have_content("List of categories")
     end
 
-    it "should access the products rotue" do
+    it "should access the categories rotue" do
       visit "/admin/product/new"
       expect(page).to have_content("New Product")
     end

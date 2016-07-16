@@ -10,6 +10,7 @@ RSpec.describe CategoryProduct, type: :model do
       context "validations" do
         it "return true" do
           expect(@category_product.product_id).to be 1
+          expect(@category_product.category_id).to be 1
         end
       end
 
