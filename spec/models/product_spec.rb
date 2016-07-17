@@ -11,14 +11,21 @@ RSpec.describe Product, type: :model do
         it { should validate_presence_of :image}
       end
       context "#save" do
-        it "return true" do
-        expect {product.save}.to change(Product, :count).by(1)
+        it "return true if Product saved" do
+          expect {product.save}.to change(Product, :count).by(1)
+        end
       end
-    end
+
+      context "#update" do
+        it "return true if Product updated" do
+          expect {product.price=1.99}.to change(product, :price).to(1.99)
+        end
+      end
+
       context "#destroy" do
-        it "return true" do
-        expect {product.destroy}.to change(Product, :count).by(0)
+        it "return true if Product destroyed" do
+          expect {product.destroy}.to change(Product, :count).by(0)
+        end
       end
     end
-  end
 end
