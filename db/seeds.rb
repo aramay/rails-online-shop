@@ -2,6 +2,7 @@ User.destroy_all
 Category.destroy_all
 Product.destroy_all
 OrderStatus.destroy_all
+Order.destroy_all
 
 # User.create("username":"Tom", "email":"tom@tom.com", "password":"tomtomtom", "admin": false)
 User.create("email":"tom@tom.com", "password":"tomtomtom", "admin": false)
@@ -30,3 +31,9 @@ OrderStatus.create(id: 1, name: "In Progress")
 OrderStatus.create(id: 2, name: "Placed")
 OrderStatus.create(id: 3, name: "Shipped")
 OrderStatus.create(id: 4, name: "Cancelled")
+
+# --  Sample Seeds for Order and OrderItem - Delete if necessary
+
+#Order.create(subtotal: 20.99, tax: 1, shipping: 1, total: 22.99, order_status_id: 1)
+
+#OrderItem.create(product_id: 1, order_id: 1, unit_price: 20.99, quantity: 1, total_price: 1)

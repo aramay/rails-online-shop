@@ -33,7 +33,13 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
+  config.include Devise::TestHelpers, type: :controller
+
+
+
   config.infer_spec_type_from_file_location!
 
   config.filter_rails_from_backtrace!
+
+
 end
