@@ -19,6 +19,5 @@ RSpec.describe CategoryProduct, type: :model do
           expect {@category_product.save}.to change(CategoryProduct, :count).by(1)
         end
       end
-
   end
 end

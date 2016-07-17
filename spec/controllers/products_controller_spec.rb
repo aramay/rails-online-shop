@@ -31,5 +31,6 @@ RSpec.describe ProductsController, type: :controller do
     it { is_expected.to respond_with :ok}
     it { is_expected.to render_template :show}
   end
+
 end
 

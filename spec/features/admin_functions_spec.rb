@@ -1,5 +1,7 @@
 require 'support/auth_helper'
 
+#features routed through products_spec controller
+
 #RSpec.feature "Users", type: :feature, js: true do
 #  context 'Admin' do
 #    include AuthHelper

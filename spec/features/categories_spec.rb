@@ -10,7 +10,7 @@ RSpec.feature "Category", type: :feature, js: true do
   end
 
   describe "#admin w/read, create, update and delete" do
-    before(:each) do
+    before do
       @category = Category.create("name":"Cats")
       @admin = User.create("email":"tim@tim.com", "password":"timtimtim", "admin": true)
       visit 'users/sign_in'
