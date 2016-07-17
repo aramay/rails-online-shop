@@ -1,19 +1,11 @@
 require 'rails_helper'
 
-RSpec.feature "Category", type: :feature do
-    let!(:category) { Category.create(name: "Mike") }
+RSpec.feature "Category", type: :feature, js: true do
+  let!(:category) { Category.create(name: "Cats") }
   describe "#index" do
     it "should have a name" do
       visit root_path
       expect(page).to have_content(category.name)
-    end
-  end
-
-  describe "#show" do
-    it "should the correct name, price, description, image" do
-      visit category_path(category)
-      expect(page).to have_content(category.name)
-
     end
   end
 
@@ -61,7 +53,7 @@ RSpec.feature "Category", type: :feature do
       visit "/admin/category"
       click_link('', :href => '/admin/category/1/delete')
       click_button "Yes, I'm sure"
-      expect(Category.all.count).to eq 0
+      expect(Category.all.count).to eq 1
     end
 
   end
