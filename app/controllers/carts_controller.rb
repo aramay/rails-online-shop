@@ -6,8 +6,9 @@ class CartsController < ApplicationController
   def update
     @order_items = current_order.order_items
     @order_items.each do |item|
-      Product.find(item.id).quantity -= item.quantity
+      Product.find(item.product_id).quantity -= item.quantity
     end
-    render "checkout_confirmation.html.haml"
+    session[:order_id] = nil
+    render "checkout/checkout_confirmation.html.haml"
   end
 end
