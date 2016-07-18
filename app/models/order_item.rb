@@ -5,6 +5,8 @@ class OrderItem < ActiveRecord::Base
   validates :quantity, presence: true, numericality: { only_integer: true, greater_than: 0 }
   validate :product_present
   validate :order_present
+  validate :in_stock
+
 
   before_save :finalize
 
@@ -36,5 +38,11 @@ class OrderItem < ActiveRecord::Base
   def finalize
     self[:unit_price] = unit_price
     self[:total_price] = quantity * self[:unit_price]
+  end
+
+  def in_stock
+    if self.quantity > self.product.quantity
+      errors.add(:quantity, "not enough in stock")
+    end
   end
 end
