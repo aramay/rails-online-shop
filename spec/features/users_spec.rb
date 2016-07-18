@@ -36,5 +36,6 @@ RSpec.feature "Users", type: :feature, js: true do
       expect(page).to have_content("Sign Out")
     end
   end
-
 end
+
+

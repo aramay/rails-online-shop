@@ -38,12 +38,12 @@ RSpec.feature "Products", type: :feature, js: true do
       expect(page).to have_content("Site Administration")
     end
 
-    it "should access the products rotue" do
+    it "should access the products route" do
       visit "/admin/product"
       expect(page).to have_content("List of Products")
     end
 
-    it "should access the products rotue" do
+    it "should access the products route" do
       visit "/admin/product/new"
       expect(page).to have_content("New Product")
     end
