@@ -12,7 +12,7 @@ class OrderItemsController < ApplicationController
     @order_item.update_attributes(order_item_params)
     @order_items = @order.order_items
     respond_to do |format|
-      format.html { respond_with @order } 
+      format.html { respond_with @order }
       format.js {}
     end
 
@@ -27,6 +27,6 @@ class OrderItemsController < ApplicationController
 
   private
   def order_item_params
-    params.require(:order_item).permit(:quantity, loc)
+    params.require(:order_item).permit(:quantity, :product_id)
   end
 end
