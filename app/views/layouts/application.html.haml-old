@@ -1,0 +1,54 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}
+      %meta{content: "IE=edge", "http-equiv": "X-UA-Compatible"}
+        %meta{content: "width=device-width, initial-scale=1", name: "viewport"}
+          %meta{content: "", name: "description"}
+            %meta{content: "", name: "author"}
+              %link{href: "../../favicon.ico", rel: "icon"}
+              %link{href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel: "stylesheet"}
+                %title HAMAZON!
+                = stylesheet_link_tag 'application', media: 'all'
+                = csrf_meta_tags
+                = javascript_include_tag 'application'
+  %body
+    %nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          %a.navbar-brand{href: "/"} HAMZON
+          %ul.nav.navbar-nav
+
+          %li= ENV['USERNAME']
+
+          - if user_signed_in?
+            %li= link_to  "Sign Out", destroy_user_session_path, :method => :get
+          - else
+
+            %li= link_to "Sign Up", new_user_registration_path
+            %li= link_to "Log In", new_user_session_path
+
+          / # - if user_signed_in?
+          / #   - if current_user.admin == true
+          / #     %li= link_to "Log In", rails_admin
+
+
+        .navbar-collapse
+    / Main jumbotron for a primary marketing message or call to action
+    %p.notice= notice
+    %p.alert= alert
+    .jumbotron
+      .container
+        %h1  HAMAZON
+        %h1
+          = render partial: 'layouts/cart_text'
+    .container
+      .row
+        = yield
+      %hr
+        %footer
+          %p &copy; 2016 HAMAZON, Inc.
+    / Placed at the end of the document so the pages load faster
+    -# %script{src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
+    -# :javascript
+    -#   window.jQuery || document.write('<\/script>')

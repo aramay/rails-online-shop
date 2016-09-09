@@ -1,54 +1,105 @@
-!!!
-%html{lang: "en"}
-  %head
-    %meta{charset: "utf-8"}
-      %meta{content: "IE=edge", "http-equiv": "X-UA-Compatible"}
-        %meta{content: "width=device-width, initial-scale=1", name: "viewport"}
-          %meta{content: "", name: "description"}
-            %meta{content: "", name: "author"}
-              %link{href: "../../favicon.ico", rel: "icon"}
-              %link{href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel: "stylesheet"}
-                %title HAMAZON!
-                = stylesheet_link_tag 'application', media: 'all'
-                = csrf_meta_tags
-                = javascript_include_tag 'application'
-  %body
-    %nav.navbar.navbar-inverse.navbar-fixed-top
-      .container
-        .navbar-header
-          %a.navbar-brand{href: "/"} HAMZON
-          %ul.nav.navbar-nav
-
-          %li= ENV['USERNAME']
-
-          - if user_signed_in?
-            %li= link_to  "Sign Out", destroy_user_session_path, :method => :get
-          - else
-
-            %li= link_to "Sign Up", new_user_registration_path
-            %li= link_to "Log In", new_user_session_path
-
-          / # - if user_signed_in?
-          / #   - if current_user.admin == true
-          / #     %li= link_to "Log In", rails_admin
-
-
-        .navbar-collapse
-    / Main jumbotron for a primary marketing message or call to action
-    %p.notice= notice
-    %p.alert= alert
-    .jumbotron
-      .container
-        %h1  HAMAZON
-        %h1 
-          = render partial: 'layouts/cart_text'
-    .container
-      .row
-        = yield
-      %hr
-        %footer
-          %p &copy; 2016 HAMAZON, Inc.
-    / Placed at the end of the document so the pages load faster
-    -# %script{src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
-    -# :javascript
-    -#   window.jQuery || document.write('<\/script>')
+.header-botom
+  .content.white
+    %nav.navbar.navbar-default.nav-menu{:role => "navigation"}
+      .navbar-header
+        %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+      .clearfix
+      / /.navbar-header
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse.collapse-pdng
+        %ul.nav.navbar-nav.nav-font
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              Shop
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => "products.html"} Shoes
+              %li
+                %a{:href => "products.html"} Tees
+              %li
+                %a{:href => "products.html"} Tops
+              %li.divider
+              %li
+                %a{:href => "products.html"} Tracks
+              %li.divider
+              %li
+                %a{:href => "products.html"} Gear
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              Men
+              %b.caret
+            %ul.dropdown-menu.multi-column.columns-3
+              .row
+                .col-sm-4.menu-img-pad
+                  %ul.multi-column-dropdown
+                    %li
+                      %a{:href => "products.html"} Joggers
+                    %li
+                      %a{:href => "products.html"} Foot Ball
+                    %li
+                      %a{:href => "products.html"} Cricket
+                    %li.divider
+                    %li
+                      %a{:href => "products.html"} Tennis
+                    %li.divider
+                    %li
+                      %a{:href => "products.html"} Casual
+                .col-sm-4.menu-img-pad
+                  %a{:href => "#"}
+                    %img.img-rsponsive.men-img-wid{:alt => "/", :src => "images/menu1.jpg"}/
+                .col-sm-4.menu-img-pad
+                  %a{:href => "#"}
+                    %img.img-rsponsive.men-img-wid{:alt => "/", :src => "images/menu2.jpg"}/
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              Women
+              %b.caret
+            %ul.dropdown-menu.multi-column.columns-2
+              .row
+                .col-sm-6
+                  %ul.multi-column-dropdown
+                    %li
+                      %a{:href => "products.html"} Tops
+                    %li
+                      %a{:href => "products.html"} Bottoms
+                    %li
+                      %a{:href => "products.html"} Yoga Pants
+                    %li.divider
+                    %li
+                      %a{:href => "products.html"} Sports
+                    %li.divider
+                    %li
+                      %a{:href => "products.html"} Gym
+                .col-sm-6
+                  %a{:href => "#"}
+                    %img.img-rsponsive.men-img-wid{:alt => "/", :src => "images/menu3.jpg"}/
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              kids
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => "products.html"} Tees
+              %li
+                %a{:href => "products.html"} Shorts
+              %li
+                %a{:href => "products.html"} Gear
+              %li.divider
+              %li
+                %a{:href => "products.html"} Watches
+              %li.divider
+              %li
+                %a{:href => "products.html"} Shoes
+          %li
+            %a{:href => "contact.html"} Catch
+          .clearfix
+        .clearfix
+      / /.navbar-collapse
+      .clearfix
+    / /.navbar
+    .clearfix
+  / /.content-
