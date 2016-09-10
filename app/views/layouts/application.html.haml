@@ -1,3 +1,43 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %title HAMAZON 2016, Inc. | Home :: Galactic
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "text/html; charset=US-ASCII", "http-equiv" => "Content-Type"}/
+    %meta{:content => "&copy; 2016 HAMAZON, Inc.", :name => "keywords"}/
+    %script{:type => "application/x-javascript"}
+      :cdata
+        addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    %meta{:charset => "", :utf => "8"}/
+    / fonts
+    %link{:href => "//fonts.googleapis.com/css?family=Fredoka+One", :rel => "stylesheet", :type => "text/css"}/
+    / fonts
+    / bootstrap
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}/
+    / coustom css
+    %link{:href => "css/style.css", :rel => "stylesheet", :type => "text/css"}/
+    / shop-kart-js
+    %script{:src => "js/simpleCart.min.js"}
+    / default-js
+    %script{:src => "js/jquery-2.1.4.min.js"}
+    / bootstrap-js
+    %script{:src => "js/bootstrap.min.js"}
+    / script
+  %body
+    .header
+      .container
+        .header-top
+          .logo
+            %a{:href => "index.html"} N-AIR
+          .login-bars
+            %a.btn.btn-default.log-bar{:href => "register.html", :role => "button"} Sign up
+            %a.btn.btn-default.log-bar{:href => "signup.html", :role => "button"} Login
+            .cart.box_1
+              %a{:href => "checkout.html"}
+                %h3
+                  .total
+
+
 .header-botom
   .content.white
     %nav.navbar.navbar-default.nav-menu{:role => "navigation"}
