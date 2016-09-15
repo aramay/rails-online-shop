@@ -1,0 +1,33 @@
+-if flash[:success]
+  .alert.alert-info
+    %p= flash[:success]
+-elsif flash[:danger]
+  .alert.alert-danger
+    %p= flash[:danger]
+
+.col-md-12
+  -@categories.each do |cat|
+    =link_to cat.name.capitalize, category_path(cat), {class: "btn btn-info"}
+
+-@products.each do |p|
+  .col-md-4
+    #item
+      #li
+        %h3
+        #span= p.name
+        = link_to image_tag("#{p.image}"), product_path(p)
+      #li
+        %strong Price:
+        #span= number_to_currency(p.price)
+      #li
+        %strong Description:
+        #span= p.description
+      #li
+        %strong Quantity:
+        #span= p.quantity
+      #li
+        = render :partial => 'product_row', :locals => { :product => p, :order_item => @order_item }
+      -# #li
+      -#   %strong Category:
+      -#   #span= Category.find(p.category_id).name
+
