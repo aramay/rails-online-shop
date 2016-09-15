@@ -31,3 +31,63 @@
       -#   %strong Category:
       -#   #span= Category.find(p.category_id).name
 
+
+
+      <% if flash[:success] %>
+        <div class="alert alert-info">
+          <p>
+            <%= flash[:success] %>
+          </p>
+        </div>
+      <% elsif flash[:danger] %>
+        <div class="alert alert-danger">
+          <p>
+            <%= flash[:danger] %>
+          </p>
+        </div>
+      <% end %>
+      <div class="col-md-12">
+        <% @categories.each do |cat| %>
+          <%= link_to cat.name.capitalize, category_path(cat), {class: "btn btn-info"} %>
+        <% end %>
+      </div>
+
+      <% @products.each do |p| %>
+        <div class="col-md-4">
+          <div id="item">
+            <div id="li">
+              <h3></h3>
+              <div id="span">
+                <%= p.name %>
+              </div>
+              <%= link_to image_tag("#{p.image}"), product_path(p) %>
+            </div>
+            <div id="li">
+              <strong>Price:</strong>
+              <div id="span">
+                <%= number_to_currency(p.price) %>
+              </div>
+            </div>
+            <div id="li">
+              <strong>Description:</strong>
+              <div id="span">
+                <%= p.description %>
+              </div>
+            </div>
+            <div id="li">
+              <strong>Quantity:</strong>
+              <div id="span">
+                <%= p.quantity %>
+              </div>
+            </div>
+            <div id="li">
+              <%= render :partial => 'product_row', :locals => { :product => p, :order_item => @order_item } %>
+            </div>
+            <% # #li %>
+            <% #   %strong Category: %>
+            <% #   #span= Category.find(p.category_id).name %>
+          </div>
+        </div>
+      <% end %>
+
+      https://pixabay.com/static/uploads/photo/2016/08/14/12/02/animation-1592596_960_720.jpg
