@@ -2,17 +2,18 @@
 %html{lang: "en"}
   %head
     %meta{charset: "utf-8"}
-      %meta{content: "IE=edge", "http-equiv": "X-UA-Compatible"}
-        %meta{content: "width=device-width, initial-scale=1", name: "viewport"}
-          %meta{content: "", name: "description"}
-            %meta{content: "", name: "author"}
-              %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"}
-              %link{href: "../../favicon.ico", rel: "icon"}
-              %link{href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel: "stylesheet"}
-                %title HAMAZON!
-                = stylesheet_link_tag 'application', media: 'all'
-                = csrf_meta_tags
-                = javascript_include_tag 'application'
+
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}
+
+    %meta{content: "", name: "description"}
+    %meta{content: "", name: "author"}
+        %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"}
+        %link{href: "../../favicon.ico", rel: "icon"}
+        %link{href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel: "stylesheet"}
+        %title HAMAZON!
+        = stylesheet_link_tag 'application', media: 'all'
+        = csrf_meta_tags
+        = javascript_include_tag 'application'
   %body
     %nav.navbar.navbar-inverse.navbar-fixed-top
       .container
@@ -41,7 +42,7 @@
     .jumbotron
       .container
         %h1  HAMAZON
-        %h1 
+        %h1
           = render partial: 'layouts/cart_text'
     .container
       .row

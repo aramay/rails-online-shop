@@ -1,0 +1,30 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">HAMZON</a>
+      <ul class="nav navbar-nav"></ul>
+      <li>
+        <%= ENV['USERNAME'] %>
+      </li>
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to  "Sign Out", destroy_user_session_path, :method => :get %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to "Sign Up", new_user_registration_path %>
+        </li>
+        <li>
+          <%= link_to "Log In", new_user_session_path %>
+        </li>
+      <% end %>
+      <!-- # - if user_signed_in?
+      -->
+      <!-- #   - if current_user.admin == true
+      -->
+      <!-- #     %li= link_to "Log In", rails_admin
+      -->
+    </div>
+    <div class="navbar-collapse"></div>
+  </div>
+</nav>
