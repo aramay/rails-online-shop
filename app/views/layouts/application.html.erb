@@ -212,18 +212,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
 
+
+        <%= yield %>
+
         <div class="sub-news">
             <div class="container">
                 <form>
                     <h3>NewsLetter</h3>
-                <input type="text" class="sub-email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-                <a class="btn btn-default subs-btn" href="#" role="button">SUBSCRIBE</a>
+                    <input type="text" class="sub-email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+                    <a class="btn btn-default subs-btn" href="#" role="button">SUBSCRIBE</a>
                 </form>
             </div>
         </div>
-
-        <%= yield %>
-
+        
         <div class="footer-grid">
             <div class="container">
                 <div class="col-md-2 re-ft-grd">
