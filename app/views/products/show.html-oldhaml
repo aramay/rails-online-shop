@@ -1,0 +1,21 @@
+=link_to "Home", root_path
+#li
+  %h3
+    %strong
+      #span= @product.name
+=image_tag("#{@product.image}")
+#li
+  %strong Price:
+#span= number_to_currency(@product.price)
+#li
+  %strong Description:
+#span= @product.description
+#li
+  %strong Quantity:
+#span= @product.quantity
+#li
+  %strong Category:
+
+- @product.categories.each do |c|
+  = c.name
+  %br

@@ -14,7 +14,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </ol>
             </div>
         </div>
-        
+
         <div class="showcase-grid">
             <div class="container">
                 <div class="col-md-8 showcase">
@@ -23,8 +23,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <li data-thumb="images/show.jpg">
                                 <div class="thumb-image"> <img src="images/show.jpg" data-imagezoom="true" class="img-responsive"> </div>
                             </li>
-                            <li data-thumb="images/show1.jpg">
-                                 <div class="thumb-image"> <img src="images/show1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                            <li data-thumb="images/show1.jpg"><%= image_tag "show1.jpg"%>
+                                 <!-- <div class="thumb-image"> <img src="images/show1.jpg" data-imagezoom="true" class="img-responsive"> </div> -->
                             </li>
                             <li data-thumb="images/show2.jpg">
                                <div class="thumb-image"> <img src="images/show2.jpg" data-imagezoom="true" class="img-responsive"> </div>
@@ -245,7 +245,48 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
             <div class="copy-rt">
                 <div class="container">
-            <p>&copy;   2015 N-AIR All Rights Reserved. Design by <a href="http://www.w3layouts.com">w3layouts</a></p>
+            <p>&copy;   2015 N-AIR All Rights Reserved. Design by <a href="#">Galactic</a></p>
                 </div>
             </div>
         </div>
+
+
+
+
+
+        <%= link_to "Home", root_path %>
+        <div id="li">
+          <h3>
+            <strong>
+              <div id="span">
+                <%= @product.name %>
+              </div>
+            </strong>
+          </h3>
+        </div>
+        <%= image_tag("#{@product.image}") %>
+        <div id="li">
+          <strong>Price:</strong>
+        </div>
+        <div id="span">
+          <%= number_to_currency(@product.price) %>
+        </div>
+        <div id="li">
+          <strong>Description:</strong>
+        </div>
+        <div id="span">
+          <%= @product.description %>
+        </div>
+        <div id="li">
+          <strong>Quantity:</strong>
+        </div>
+        <div id="span">
+          <%= @product.quantity %>
+        </div>
+        <div id="li">
+          <strong>Category:</strong>
+        </div>
+        <% @product.categories.each do |c| %>
+          <%= c.name %>
+          <br/>
+        <% end %>
