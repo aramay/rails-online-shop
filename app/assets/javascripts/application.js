@@ -12,7 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-// //= require_tree .
-// $(document).ready ->
-//   $(".edit_order_item").on("ajax:success", (e, data, status, xhr) ->
-//     alert "Quantity updated!"
+//= require_tree .
