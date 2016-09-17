@@ -21,16 +21,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="flexslider">
                           <ul class="slides">
                             <li data-thumb="images/show.jpg">
-                                <div class="thumb-image"> <img src="images/show.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                                <div class="thumb-image">
+                                    <!-- <img src="images/show.jpg" data-imagezoom="true" class="img-responsive"> -->
+                                    <%= image_tag "show.jpg", data_imagezoom: "true", class: "img-responsive"%>
+
+                                </div>
                             </li>
-                            <li data-thumb="images/show1.jpg"><%= image_tag "show1.jpg"%>
-                                 <!-- <div class="thumb-image"> <img src="images/show1.jpg" data-imagezoom="true" class="img-responsive"> </div> -->
+                            <li data-thumb="images/show1.jpg">
+                            <!-- <%= image_tag "show1.jpg"%> -->
+                                 <div class="thumb-image">
+                                     <%= image_tag "show1.jpg", data_imagezoom: "true", class: "img-responsive"%>
+                                 </div>
                             </li>
                             <li data-thumb="images/show2.jpg">
-                               <div class="thumb-image"> <img src="images/show2.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                               <div class="thumb-image">
+                                   <%= image_tag "show2.jpg", data_imagezoom: "true", class: "img-responsive"%>
+                               </div>
                             </li>
                             <li data-thumb="images/show3.jpg">
-                               <div class="thumb-image"> <img src="images/show3.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                               <div class="thumb-image">
+                                   <%= image_tag "show.jpg", data_imagezoom: "true", class: "img-responsive"%>
+                               </div>
                             </li>
                           </ul>
                         <div class="clearfix"></div>
@@ -141,7 +152,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                      <!-- normal -->
                         <div class="ih-item square effect3 bottom_to_top">
                             <div class="bottom-2-top">
-                    <div class="img"><img src="images/grid4.jpg" alt="/" class="img-responsive gri-wid"></div>
+                    <div class="img">
+                        <!-- <img src="images/grid4.jpg" alt="/" class="img-responsive gri-wid"> -->
+                        <%= image_tag "grid4.jpg", class: "img-responsive gri-wid"%>
+                    </div>
                             <div class="info">
                                 <div class="pull-left styl-hdn">
                                     <h3>style 01</h3>
@@ -161,7 +175,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <!-- normal -->
                         <div class="ih-item square effect3 bottom_to_top">
                             <div class="bottom-2-top">
-                    <div class="img"><img src="images/grid6.jpg" alt="/" class="img-responsive gri-wid"></div>
+                    <div class="img">
+                        <%= image_tag "grid6.jpg", class: "img-responsive gri-wid"%>
+                    </div>
                             <div class="info">
                                 <div class="pull-left styl-hdn">
                                     <h3>style 01</h3>
@@ -181,7 +197,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <!-- normal -->
                         <div class="ih-item square effect3 bottom_to_top">
                             <div class="bottom-2-top">
-                    <div class="img"><img src="images/grid3.jpg" alt="/" class="img-responsive gri-wid"></div>
+                    <div class="img">
+                        <%= image_tag "grid3.jpg", class: "img-responsive gri-wid"%>
+                    </div>
                             <div class="info">
                                 <div class="pull-left styl-hdn">
                                     <h3>style 01</h3>
@@ -200,93 +218,3 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="clearfix"></div>
             </div>
         </div>
-
-        <div class="footer-grid">
-            <div class="container">
-                <div class="col-md-2 re-ft-grd">
-                    <h3>Categories</h3>
-                    <ul class="categories">
-                        <li><a href="#">Men</a></li>
-                        <li><a href="#">Women</a></li>
-                        <li><a href="#">Kids</a></li>
-                        <li><a href="#">Formal</a></li>
-                        <li><a href="#">Casuals</a></li>
-                        <li><a href="#">Sports</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 re-ft-grd">
-                    <h3>Short links</h3>
-                    <ul class="shot-links">
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Delivery</a></li>
-                        <li><a href="#">Return Policy</a></li>
-                        <li><a href="#">Terms & conditions</a></li>
-                        <li><a href="contact.html">Sitemap</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6 re-ft-grd">
-                    <h3>Social</h3>
-                    <ul class="social">
-                        <li><a href="#" class="fb">facebook</a></li>
-                        <li><a href="#" class="twt">twitter</a></li>
-                        <li><a href="#" class="gpls">g+ plus</a></li>
-                        <div class="clearfix"></div>
-                    </ul>
-                </div>
-                <div class="col-md-2 re-ft-grd">
-                    <div class="bt-logo">
-                        <div class="logo">
-                            <a href="index.html" class="ft-log">N-AIR</a>
-                        </div>
-                    </div>
-                </div>
-        <div class="clearfix"></div>
-            </div>
-            <div class="copy-rt">
-                <div class="container">
-            <p>&copy;   2015 N-AIR All Rights Reserved. Design by <a href="#">Galactic</a></p>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-        <%= link_to "Home", root_path %>
-        <div id="li">
-          <h3>
-            <strong>
-              <div id="span">
-                <%= @product.name %>
-              </div>
-            </strong>
-          </h3>
-        </div>
-        <%= image_tag("#{@product.image}") %>
-        <div id="li">
-          <strong>Price:</strong>
-        </div>
-        <div id="span">
-          <%= number_to_currency(@product.price) %>
-        </div>
-        <div id="li">
-          <strong>Description:</strong>
-        </div>
-        <div id="span">
-          <%= @product.description %>
-        </div>
-        <div id="li">
-          <strong>Quantity:</strong>
-        </div>
-        <div id="span">
-          <%= @product.quantity %>
-        </div>
-        <div id="li">
-          <strong>Category:</strong>
-        </div>
-        <% @product.categories.each do |c| %>
-          <%= c.name %>
-          <br/>
-        <% end %>
