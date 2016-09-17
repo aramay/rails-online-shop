@@ -21,16 +21,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="flexslider">
                           <ul class="slides">
                             <li data-thumb="images/show.jpg">
-                                <div class="thumb-image"> <img src="images/show.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                                <div class="thumb-image">
+                                    <!-- <img src="images/show.jpg" data-imagezoom="true" class="img-responsive"> -->
+                                    <%= image_tag "show.jpg", data_imagezoom: "true", class: "img-responsive"%>
+
+                                </div>
                             </li>
-                            <li data-thumb="images/show1.jpg"><%= image_tag "show1.jpg"%>
-                                 <!-- <div class="thumb-image"> <img src="images/show1.jpg" data-imagezoom="true" class="img-responsive"> </div> -->
+                            <li data-thumb="images/show1.jpg">
+                            <!-- <%= image_tag "show1.jpg"%> -->
+                                 <div class="thumb-image">
+                                     <%= image_tag "show1.jpg", data_imagezoom: "true", class: "img-responsive"%>
+                                 </div>
                             </li>
                             <li data-thumb="images/show2.jpg">
-                               <div class="thumb-image"> <img src="images/show2.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                               <div class="thumb-image">
+                                   <%= image_tag "show2.jpg", data_imagezoom: "true", class: "img-responsive"%>
+                               </div>
                             </li>
                             <li data-thumb="images/show3.jpg">
-                               <div class="thumb-image"> <img src="images/show3.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                               <div class="thumb-image">
+                                   <%= image_tag "show.jpg", data_imagezoom: "true", class: "img-responsive"%>
+                               </div>
                             </li>
                           </ul>
                         <div class="clearfix"></div>
@@ -141,7 +152,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                      <!-- normal -->
                         <div class="ih-item square effect3 bottom_to_top">
                             <div class="bottom-2-top">
-                    <div class="img"><img src="images/grid4.jpg" alt="/" class="img-responsive gri-wid"></div>
+                    <div class="img">
+                        <!-- <img src="images/grid4.jpg" alt="/" class="img-responsive gri-wid"> -->
+                        <%= image_tag "grid4.jpg", class: "img-responsive gri-wid"%>
+                    </div>
                             <div class="info">
                                 <div class="pull-left styl-hdn">
                                     <h3>style 01</h3>
@@ -161,7 +175,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <!-- normal -->
                         <div class="ih-item square effect3 bottom_to_top">
                             <div class="bottom-2-top">
-                    <div class="img"><img src="images/grid6.jpg" alt="/" class="img-responsive gri-wid"></div>
+                    <div class="img">
+                        <%= image_tag "grid6.jpg", class: "img-responsive gri-wid"%>
+                    </div>
                             <div class="info">
                                 <div class="pull-left styl-hdn">
                                     <h3>style 01</h3>
@@ -181,7 +197,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <!-- normal -->
                         <div class="ih-item square effect3 bottom_to_top">
                             <div class="bottom-2-top">
-                    <div class="img"><img src="images/grid3.jpg" alt="/" class="img-responsive gri-wid"></div>
+                    <div class="img">
+                        <%= image_tag "grid3.jpg", class: "img-responsive gri-wid"%>
+                    </div>
                             <div class="info">
                                 <div class="pull-left styl-hdn">
                                     <h3>style 01</h3>
