@@ -21,6 +21,12 @@ body{
 	font-family: 'Pathway Gothic One';
 	src:url(../fonts/Pathway_Gothic_One/PathwayGothicOne-Regular.ttf) format('truetype');
 }
+
+p#notice {
+	text-align: center;
+	font-size: 20px;
+}
+
 .header-top{
     position: relative;
     padding: 0;
