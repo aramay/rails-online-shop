@@ -8,6 +8,8 @@ class ProductsController < ApplicationController
     @products = Product.all
     @categories = Category.all
     @order_item = current_order.order_items.new
+
+    @cart = current_cart
   end
 
   def show
