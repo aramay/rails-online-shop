@@ -100,7 +100,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                         <ul>
                             <li class="ad-2-crt simpleCart_shelfItem">
-                                <a class="btn item_add" href="#" role="button">Add To Cart</a>
+                                <!-- <a class="btn item_add" href="#" role="button">Add To Cart</a> -->
+                                <a><%= button_to 'Add To Cart', line_items_path(product_id: @product), class: "btn item_add", role: "button" %>Add To Cart</a>
                                 <a class="btn" href="#" role="button">Buy Now</a>
                             </li>
                         </ul>
