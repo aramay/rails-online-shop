@@ -41,8 +41,18 @@ class CartsController < ApplicationController
 
   # DELETE /carts/1
   def destroy
-    @cart.destroy
-    redirect_to carts_url, notice: 'Cart was successfully destroyed.'
+    #method 'current_cart' defined in application controller
+      @cart = current_cart
+      @cart.destroy
+      session[:cart_id] = nil
+
+      respond_to do |format|
+          format.html { redirect_to root_path, notice: "Your cart is currently empty" }
+
+          format.json { head :no_content }
+      end
+
+    #   redirect_to carts_url, notice: 'Cart was successfully destroyed.'
   end
 
   private
