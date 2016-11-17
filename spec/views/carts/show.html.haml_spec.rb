@@ -1,5 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe "carts/show.html.haml", type: :view do
-  #pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe "carts/show", type: :view do
+  before(:each) do
+    @cart = assign(:cart, Cart.create!())
+  end
+
+  it "renders attributes in <p>" do
+    render
+  end
 end

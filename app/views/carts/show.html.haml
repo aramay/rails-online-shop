@@ -1,6 +1,6 @@
-%div{:class => "shopping-cart"}
-= render partial:'shopping_cart'
-%div
-  =form_tag("/cart", method: "PATCH") do
-    =submit_tag "Checkout"
+%p#notice= notice
 
+
+= link_to 'Edit', edit_cart_path(@cart)
+\|
+= link_to 'Back', carts_path
