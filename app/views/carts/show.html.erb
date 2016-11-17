@@ -1,0 +1,9 @@
+<div>
+    <ul>
+        <% @cart.line_items.each do |item| %>
+            <li>
+                <%= item.product.description %>
+            </li>
+        <% end %>
+    </ul>
+</div>
