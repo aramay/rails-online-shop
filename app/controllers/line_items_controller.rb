@@ -21,13 +21,31 @@ class LineItemsController < ApplicationController
 
   # POST /line_items
   def create
-    @line_item = LineItem.new(line_item_params)
+# binding.pry
+      @cart = current_cart
+      product = Product.find(params[:product_id])
+      @line_item = @cart.line_items.build(product: product)
 
-    if @line_item.save
-      redirect_to @line_item, notice: 'Line item was successfully created.'
-    else
-      render :new
-    end
+      respond_to do |format|
+
+          if @line_item.save
+              format.html { redirect_to @line_item.cart, notice: "Line item was successfully created" }
+
+              format.json { render json: @line_item, status: :created, location: @line_item }
+          else
+              format.html { render action: new }
+              format.json { render json: @line_item.errors, status: :unprocessable_entity }
+
+          end
+      end
+
+    # @line_item = LineItem.new(line_item_params)
+    #
+    # if @line_item.save
+    #   redirect_to @line_item, notice: 'Line item was successfully created.'
+    # else
+    #   render :new
+
   end
 
   # PATCH/PUT /line_items/1
