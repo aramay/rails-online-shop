@@ -1,8 +1,8 @@
 class ProductsController < ApplicationController
-  # before_action :authenticate_admin, except: [:show, :index]
-  # before_action :authenticate_user, except: [:show, :index]
+  before_action :authenticate_admin, except: [:show, :index]
+  before_action :authenticate_user, except: [:show, :index]
   # before_filter :authenticate_user
-  # before_action :find_product, only: [:show, :edit, :update, :destroy]
+  before_action :find_product, only: [:show, :edit, :update, :destroy]
 
   def index
     @products = Product.all
@@ -49,13 +49,13 @@ class ProductsController < ApplicationController
   end
 
 private
- #def authenticate_admin
- #  if current_user.admin
- #    redirect_to rails_admin
- #  else
- #    redirect_to root_path
- #  end
- #end
+ def authenticate_admin
+  if current_user.admin
+    redirect_to rails_admin
+  else
+    redirect_to root_path
+  end
+ end
 
   def product_params
     params.require(:product).permit(:name, :price, :description, :quantity, :image)
