@@ -8,7 +8,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="head-bread">
             <div class="container">
                 <ol class="breadcrumb">
-                    <li><a href="#">Home</a></li>
+                    <li>
+                        <%= link_to 'Home', root_path%>
+                    </li>
                     <li><a href="#">Men</a></li>
                     <li class="active">Shop</li>
                 </ol>
@@ -53,7 +55,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <h3>Nike Air Max 2015</h3>
                             <p>Men's running shoes</p>
                             <!-- <h4>&#36;<%@product.price%></h4> -->
-                            <h4>&#36;<%=@product.price%></h4>
+                            <h4><%=number_to_currency(@product.price)%></h4>
                         </div>
                         <div class="pull-left rating-stars">
                             <ul>
