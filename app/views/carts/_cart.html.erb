@@ -1,0 +1,12 @@
+<div>
+    <ul>
+
+        <%= render(@cart.line_items) %>
+
+        <li>
+            Total<%= @cart.total_price %>
+        </li>
+    </ul>
+
+    <%= button_to "Empty Cart", @cart, method: :delete, class: "simpleCart_empty" %>
+</div>

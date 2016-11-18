@@ -1,0 +1,18 @@
+<!-- Inside the partial template, we refer
+to the current object using the variable name that matches the name of the
+template. In this case, the partial is named line_item, so inside the partial we
+expect to have a variable called line_item. -->
+
+<li>
+    Quantity<%= line_item.quantity %>
+</li>
+<li>
+    Description<%= line_item.product.description %>
+</li>
+<li>
+    Price<%= line_item.product.price %>
+</li>
+
+<li>
+    Total<%= @cart.total_price %>
+</li>

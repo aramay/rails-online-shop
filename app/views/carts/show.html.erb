@@ -1,24 +1,3 @@
 <div>
-    <ul>
-        <% @cart.line_items.each do |item| %>
-            <!-- <li>
-                Description<%= item.product.inspect %>
-            </li> -->
-            <li>
-                Quantity<%= item.quantity %>
-            </li>
-            <li>
-                Description<%= item.product.description %>
-            </li>
-            <li>
-                Price<%= item.product.price %>
-            </li>
-
-        <% end %>
-        <li>
-            Total<%= @cart.total_price %>
-        </li>
-    </ul>
-
-    <%= button_to "Empty Cart", @cart, method: :delete, class: "simpleCart_empty" %>Empty Cart</a>
+    <%= render @cart %>
 </div>
