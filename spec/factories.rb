@@ -1,4 +1,10 @@
 FactoryGirl.define do
+  factory :order do
+    name "MyString"
+    address "MyText"
+    email "MyString"
+    pay_type "MyString"
+  end
   factory :line_item do
     product_id 1
     cart_id 1
