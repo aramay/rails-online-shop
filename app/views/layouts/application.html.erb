@@ -82,21 +82,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <%= link_to 'Login', user_session_path, :class => "btn btn-default log-bar"%>
                         <%end%>
 
-                        <div class="cart box_1">
+                        <!-- Cart div start -->
+
+                        <div id="cart" class="cart box_1">
                             <a href="checkout.html">
                             <h3>
-                                <div class="total">
+                                <!-- <div class="total">
 
-<span class="simpleCart_total"></span>(<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)</div></h3>
+                                    <span class="simpleCart_total">
+                                    </span>
+
+                                    (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)
+                                </div> -->
+                            </h3>
+
                             </a>
+
                             <p>
                                 <!-- <a href="javascript:;" class="simpleCart_empty">Empty Cart</a> -->
                                 <%= session[:cart_id] %>
-                                <%= @cart %>
-                                <%= button_to "Empty Cart", @cart, method: :delete, class: "simpleCart_empty" %>Empty Cart</a>
+
+                                    <!-- <%= button_to "Empty Cart", @cart, method: :delete, class: "simpleCart_empty" %>Empty Cart</a> -->
+
                             </p>
                             <div class="clearfix"> </div>
                         </div>
+                        <!-- Cart div end -->
                     </div>
         <div class="clearfix"></div>
                 </div>
