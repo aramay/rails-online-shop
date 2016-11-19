@@ -18,7 +18,7 @@ gem 'pry-byebug'
 # gem 'dotenv-rails'
 
 gem 'jquery-rails'
-gem 'haml-rails'
+# gem 'haml-rails'
 gem 'rails_12factor', group: :production
 
 gem 'bcrypt'
