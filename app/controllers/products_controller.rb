@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     @categories = Category.all
-    @order_item = current_order.order_items.new
+    # @order_item = current_order.order_items.new
 
     @cart = current_cart
   end
@@ -15,7 +15,9 @@ class ProductsController < ApplicationController
   def show
     #   binding.pry
     find_product
-    @order_item = current_order.order_items.new
+    p find_product
+    binding.pry
+    # @order_item = current_order.order_items.new
   end
 
   def new
@@ -65,5 +67,6 @@ private
 
   def find_product
     @product = Product.find(params[:id])
+    session[:product_id] = @product.id
   end
 end
