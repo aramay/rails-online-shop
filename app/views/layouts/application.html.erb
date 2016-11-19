@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
     <head>
 
-        <title>HAMAZON!</title>
+        <title>Rails Online Shop</title>
 
         <%= csrf_meta_tag %>
 
@@ -29,19 +29,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- <link href="http://rails-online-shop-template.netlify.com/css/styles.css" rel="stylesheet" type="text/css"> -->
 
         <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
+        <!--coustom css-->
         <%= stylesheet_link_tag "style.css" %>
 
-		<!--fonts-->
-		<!--bootstrap-->
-			 <!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
-		<!--coustom css-->
+        <!--bootstrap css-->
+        <%= javascript_include_tag 'bootstrap.min.css' %>
+        <!--bootstrap js-->
+        <%= javascript_include_tag 'bootstrap.min.js' %>
+
+        <!-- FlexSlider -->
+           <!-- <script src="js/imagezoom.js"></script> -->
+
+         <%= javascript_include_tag "jquery.flexslider.js" %>
+
+        <!--fonts-->
+
 			<!-- <link href="css/style.css" rel="stylesheet" type="text/css"/> -->
         <!--shop-kart-js-->
         <!-- <script src="js/simpleCart.min.js"></script> -->
 		<!--default-js-->
 			<!-- <script src="js/jquery-2.1.4.min.js"></script> -->
 		<!--bootstrap-js-->
-			<script src="js/bootstrap.min.js"></script>
+
+			<!-- <script src="js/bootstrap.min.js"></script> -->
+            <!-- <%= javascript_include_tag 'bootstrap.min.js' %> -->
 		<!--script-->
 
         <!-- FlexSlider -->
