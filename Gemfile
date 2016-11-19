@@ -12,6 +12,7 @@ gem 'sass-rails', '~> 5.0', '>= 5.0.4'
 
 gem 'uglifier'
 gem 'thin'
+gem 'pry-byebug'
 
 # #dot-env
 # gem 'dotenv-rails'
