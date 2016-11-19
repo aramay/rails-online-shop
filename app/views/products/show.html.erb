@@ -8,12 +8,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="head-bread">
             <div class="container">
                 <ol class="breadcrumb">
-                    <li><a href="#">Home</a></li>
+                    <li>
+                        <%= link_to 'Home', root_path%>
+                    </li>
                     <li><a href="#">Men</a></li>
                     <li class="active">Shop</li>
                 </ol>
             </div>
         </div>
+
+
 
         <div class="showcase-grid">
             <div class="container">
@@ -52,7 +56,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="pull-left shoe-name">
                             <h3>Nike Air Max 2015</h3>
                             <p>Men's running shoes</p>
-                            <h4>&#36;190</h4>
+                            <!-- <h4>&#36;<%@product.price%></h4> -->
+                            <h4><%=number_to_currency(@product.price)%></h4>
                         </div>
                         <div class="pull-left rating-stars">
                             <ul>
@@ -97,8 +102,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                         <ul>
                             <li class="ad-2-crt simpleCart_shelfItem">
-                                <a class="btn item_add" href="#" role="button">Add To Cart</a>
-                                <a class="btn" href="#" role="button">Buy Now</a>
+
+                                <!-- <%= link_to line_items_path(product_id: @product), class: "btn item_add", role: "button"  do %>
+                                Add To Cart
+                                <% end %> -->
+
+                                <%= button_to 'Add To Cart', line_items_path(product_id: @product), id: "add-to-cart", class: "btn item_add", role: "button", remote: true %>
+
+                                Add To Cart
+                            </a>
+                                <!-- <a class="btn" href="#" role="button">Buy Now</a> -->
+
+                                <%= link_to new_order_path, url: product_path, method: :get, class: "btn" do %>
+                                Buy Now
+                                <% end %>
                             </li>
                         </ul>
                     </div>

@@ -1,0 +1,20 @@
+<!-- <div  class="">
+
+    <%= @cart.total_price %>
+
+
+</div> -->
+<!-- <%= button_to "Empty Cart", @cart, method: :delete, class: "simpleCart_empty" %> -->
+
+
+<div class="total">
+
+
+    <span class="simpleCart_total">
+        <%= number_to_currency(@cart.total_price )%>
+    </span>
+
+    (<span id="simpleCart_quantity" class="simpleCart_quantity">
+
+    </span>)
+</div>

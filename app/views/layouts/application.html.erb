@@ -26,6 +26,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!--fonts-->
 		<link href='//fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
 
+        <!-- <link href="http://rails-online-shop-template.netlify.com/css/styles.css" rel="stylesheet" type="text/css"> -->
+
+        <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
+        <%= stylesheet_link_tag "style.css" %>
+
 		<!--fonts-->
 		<!--bootstrap-->
 			 <!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
@@ -36,7 +41,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!--default-js-->
 			<!-- <script src="js/jquery-2.1.4.min.js"></script> -->
 		<!--bootstrap-js-->
-			<!-- <script src="js/bootstrap.min.js"></script> -->
+			<script src="js/bootstrap.min.js"></script>
 		<!--script-->
 
         <!-- FlexSlider -->
@@ -64,26 +69,50 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="container">
                 <div class="header-top">
                     <div class="logo">
-                        <a href="index.html">N-AIR</a>
+                        <!-- <a href="index.html">N-AIR</a> -->
+                        <%= link_to 'N-AIR', root_path%>
                     </div>
                     <div class="login-bars">
-                        <a class="btn btn-default log-bar" href="register.html" role="button">Sign up</a>
-                        <a class="btn btn-default log-bar" href="signup.html" role="button">Login</a>
-                        <div class="cart box_1">
+                        <!-- <a class="btn btn-default log-bar" href="register.html" role="button">Sign up</a> -->
+                        <% if user_signed_in? %>
+                            <%= link_to 'Log out', destroy_user_session_path, :class => "btn btn-default log-bar" %>
+                        <%else%>
+                            <%= link_to 'Sign Up', new_user_registration_path, :class => "btn btn-default log-bar"%>
+                            <!-- <a class="btn btn-default log-bar" href="signup.html" role="button">Login</a> -->
+                            <%= link_to 'Login', user_session_path, :class => "btn btn-default log-bar"%>
+                        <%end%>
+
+                        <!-- Cart div start -->
+
+                        <div id="cart" class="cart box_1">
                             <a href="checkout.html">
                             <h3>
-                                <div class="total">
+                                <!-- <div class="total">
 
-<span class="simpleCart_total"></span>(<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)</div></h3>
+                                    <span class="simpleCart_total">
+                                    </span>
+
+                                    (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)
+                                </div> -->
+                            </h3>
+
                             </a>
-                            <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+
+                            <p>
+                                <!-- <a href="javascript:;" class="simpleCart_empty">Empty Cart</a> -->
+                                <%= session[:cart_id] %>
+
+                                    <!-- <%= button_to "Empty Cart", @cart, method: :delete, class: "simpleCart_empty" %>Empty Cart</a> -->
+
+                            </p>
                             <div class="clearfix"> </div>
                         </div>
+                        <!-- Cart div end -->
                     </div>
         <div class="clearfix"></div>
                 </div>
 
-                <!---menu-----bar--->
+                <!---menu-bar--->
                 <div class="header-botom">
                     <div class="content white">
                     <nav class="navbar navbar-default nav-menu" role="navigation">
@@ -186,59 +215,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
 
-        <!-- Carousel start -->
-        <div class="header-end">
-            <div class="container">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                  </ol>
+        <% if notice %>
+            <p id="notice" class="alert alert-info">
+                <%= notice %>
+            </p>
+        <% end %>
 
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <!-- <img src="./images/shoe3.jpg" alt="..."> -->
-                        <%= image_tag "shoe3.jpg"%>
-                        <div class="carousel-caption car-re-posn">
-                            <h3>AirMax</h3>
-                            <h4>You feel to fall</h4>
-                            <span class="color-bar"></span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <%= image_tag "shoe1.jpg"%>
-                        <div class="carousel-caption car-re-posn">
-                            <h3>AirMax</h3>
-                            <h4>You feel to fall</h4>
-                            <span class="color-bar"></span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <%= image_tag "shoe2.jpg"%>
-                        <div class="carousel-caption car-re-posn">
-                            <h3>AirMax</h3>
-                            <h4>You feel to fall</h4>
-                            <span class="color-bar"></span>
-                        </div>
-                    </div>
-                  </div>
 
-                  <!-- Controls -->
-                  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left car-icn" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right car-icn" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
 
 
         <%= yield %>

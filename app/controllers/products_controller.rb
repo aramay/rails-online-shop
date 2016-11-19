@@ -1,19 +1,23 @@
 class ProductsController < ApplicationController
-  # before_action :authenticate_admin, except: [:show, :index]
-  # before_action :authenticate_user, except: [:show, :index]
+  before_action :authenticate_admin, except: [:show, :index]
+  before_action :authenticate_user, except: [:show, :index]
   # before_filter :authenticate_user
-  # before_action :find_product, only: [:show, :edit, :update, :destroy]
+  before_action :find_product, only: [:show, :edit, :update, :destroy]
 
   def index
     @products = Product.all
     @categories = Category.all
-    @order_item = current_order.order_items.new
+    # @order_item = current_order.order_items.new
+
+    @cart = current_cart
   end
 
   def show
     #   binding.pry
     find_product
-    @order_item = current_order.order_items.new
+    p find_product
+    binding.pry
+    # @order_item = current_order.order_items.new
   end
 
   def new
@@ -49,13 +53,13 @@ class ProductsController < ApplicationController
   end
 
 private
- #def authenticate_admin
- #  if current_user.admin
- #    redirect_to rails_admin
- #  else
- #    redirect_to root_path
- #  end
- #end
+ def authenticate_admin
+  if current_user.admin
+    redirect_to rails_admin
+  else
+    redirect_to root_path
+  end
+ end
 
   def product_params
     params.require(:product).permit(:name, :price, :description, :quantity, :image)
@@ -63,5 +67,6 @@ private
 
   def find_product
     @product = Product.find(params[:id])
+    session[:product_id] = @product.id
   end
 end
