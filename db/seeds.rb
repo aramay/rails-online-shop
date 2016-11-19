@@ -9,6 +9,8 @@ User.create("email":"tom@tom.com", "password":"tomtomtom", "admin": false)
 # User.create("username":"Tim", "email":"tim@tim.com", "password":"timtimtim", "admin": true)
 User.create("email":"tim@tim.com", "password":"timtimtim", "admin": true)
 
+User.create("email":"john@hamazon.com", "password":"12345678", "admin": false)
+
 Category.create("name":"Hampsters")
 Category.create("name":"Cats")
 
