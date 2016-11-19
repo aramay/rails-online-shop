@@ -12,7 +12,30 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
-    @order = Order.new
+p "*" * 8
+p params
+p "*" * 8
+p session[:product_id]
+# binding.pry
+
+p "*" * 8
+      @cart = current_cart
+      if @cart.line_items.empty?
+
+          product = Product.find(session[:product_id])
+
+          p product
+        #   @product = Product.find(params[:product_id])
+        #   redirect_to '/products/session[:product_id]', notice: "Your cart is empty"
+          redirect_to product_path(session[:product_id]), notice: "Your cart is empty"
+          return
+      end
+
+      @order = Order.new
+      respond_to do |format|
+          format.html #new html.erb
+          format.json { render json: @order }
+      end
   end
 
   # GET /orders/1/edit
@@ -22,11 +45,25 @@ class OrdersController < ApplicationController
   # POST /orders
   def create
     @order = Order.new(order_params)
+    # @order = Order.new(params[:order])
+    @order.add_line_items_from_cart(current_cart) #adds into this order the items that are already stored in the cart
 
-    if @order.save
-      redirect_to @order, notice: 'Order was successfully created.'
-    else
-      render :new
+    respond_to do |format|
+
+        if @order.save
+            Cart.destroy(session[:cart_id])
+            session[:cart_id] = nil
+
+            format.html { redirect_to @order, notice: "Thank you for your order" }
+            format.json { render json: @order, status: :created, location: order }
+
+            #   redirect_to @order, notice: 'Order was successfully created.'
+        else
+            @cart = current_cart
+            format.html { render action: "new" }
+            format.json { render json: @order.erros, status: "unprocessable_entity" }
+            #   render :new
+        end
     end
   end
 
