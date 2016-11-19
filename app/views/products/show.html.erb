@@ -111,7 +111,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                                 Add To Cart
                             </a>
-                                <a class="btn" href="#" role="button">Buy Now</a>
+                                <!-- <a class="btn" href="#" role="button">Buy Now</a> -->
+
+                                <%= link_to new_order_path, url: product_path, method: :get, class: "btn" do %>
+                                Buy Now
+                                <% end %>
                             </li>
                         </ul>
                     </div>
