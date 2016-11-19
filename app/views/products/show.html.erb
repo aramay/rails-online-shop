@@ -31,7 +31,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                                 </div>
                             </li>
-                            <li data-thumb="images/show1.jpg">
+                            <!-- <li data-thumb="images/show1.jpg"> -->
+                            <li>
+
+                                <%=image_path("show1.jpg") %>
                             <!-- <%= image_tag "show1.jpg"%> -->
                                  <div class="thumb-image">
                                      <%= image_tag "show1.jpg", data_imagezoom: "true", class: "img-responsive"%>
@@ -103,7 +106,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <ul>
                             <li class="ad-2-crt simpleCart_shelfItem">
 
-                                <!-- <%= link_to line_items_path(product_id: @product), class: "btn item_add", role: "button"  do %>
+                                <!-- <%= link_to line_items_path(product_id: @product), method: :post, class: "btn item_add", role: "button"  do %>
                                 Add To Cart
                                 <% end %> -->
 
