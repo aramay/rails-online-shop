@@ -17,8 +17,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
 
-
-
         <div class="showcase-grid">
             <div class="container">
                 <div class="col-md-8 showcase">
@@ -64,11 +62,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                         <div class="pull-left rating-stars">
                             <ul>
-    <li><a href="#" class="active"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
-    <li><a href="#" class="active"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
-    <li><a href="#" class="active"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
-    <li><a href="#"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
-    <li><a href="#"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
+        <li><a href="#" class="active"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
+        <li><a href="#" class="active"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
+        <li><a href="#" class="active"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
                             </ul>
                         </div>
                         <div class="clearfix"></div>
@@ -106,11 +104,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <ul>
                             <li class="ad-2-crt simpleCart_shelfItem">
 
-                                <!-- <%= link_to line_items_path(product_id: @product), method: :post, class: "btn item_add", role: "button"  do %>
+                                <!-- <%= link_to line_items_path(product_id: @product), {:action => :create}, method: :post, class: "btn item_add", role: "button"  do %>
                                 Add To Cart
                                 <% end %> -->
 
-                                <%= button_to 'Add To Cart', line_items_path(product_id: @product), id: "add-to-cart", class: "btn item_add", role: "button", remote: true %>
+                                <%= button_to 'Add To Cart', line_items_path(product_id: @product), id: "add-to-cart", class: "btn item_add style-as-link", role: "button", remote: true %>
 
                                 Add To Cart
                             </a>
@@ -136,6 +134,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="clearfix"></div>
             </div>
         </div>
+
+
+
+
+
 
         <div class="specifications">
             <div class="container">
