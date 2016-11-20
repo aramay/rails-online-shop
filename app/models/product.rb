@@ -26,7 +26,4 @@ class Product < ActiveRecord::Base
 
   end
 
-
-  # default_scope { where(active: true) }
-
 end
