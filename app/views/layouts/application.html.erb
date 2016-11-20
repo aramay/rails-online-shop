@@ -231,18 +231,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <%= notice %>
             </p>
         <% end %> -->
-        <% flash.each do |key, value| %>
-          <div class="alert alert-<%= key %>">
-            <a href="#" data-dismiss="alert" class="close">×</a>
+        <div id=notice>
+            <% flash.each do |key, value| %>
+            <div class="alert alert-info alert-<%= key %>">
+                <a href="#" data-dismiss="alert" class="close">×</a>
                 <ul>
-                  <li>
-                    <%= value %>
-                  </li>
+                    <li>
+                        <%= value %>
+                    </li>
                 </ul>
-          </div>
-        <% end %>
-
-        <!-- <%= devise_error_messages! %> -->
+            </div>
+            <% end %>
+        </div>
 
         <%= yield %>
 
