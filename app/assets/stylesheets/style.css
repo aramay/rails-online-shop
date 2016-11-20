@@ -984,7 +984,7 @@ input#amount {
     margin: 0 0 10px 0;
     font-family: 'Pathway Gothic One';
 }
-.log form input[type="text"], .log form input[type="password"] {
+.log form input[type="text"],.log form input[type="email"], .log form input[type="password"] {
     width: 70%;
     padding: 8px;
     font-size: 14px;
