@@ -1,3 +1,16 @@
+<div class="head-bread">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li>
+                <%= link_to 'Home', root_path%>
+            </li>
+            <li class="active">LOGIN
+                <!-- <a href="#">LOGIN</a> -->
+            </li>
+        </ol>
+    </div>
+</div>
+
 <div class="login">
     <div class="container">
         <div class="login-grids">
@@ -7,7 +20,10 @@
                 <p>Welcome, please enter the following to continue.</p>
                 <p>If you have previously Login with us, <a href="#">Click Here</a></p>
 
+
                     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+                    <%= devise_error_messages! %>
                       <!-- <div class="field"> -->
                       <h5>Email:</h5>
                         <!-- <%= f.label :email %><br /> -->
@@ -32,16 +48,19 @@
                       </div>
                 <% end %>
             </div>
-        </div>
 
-        <div class="col-md-6 login-right">
+
+            <div class="col-md-6 login-right">
                 <h3>New Registration</h3>
                 <div class="strip"></div>
                 <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
                 <!-- <a href="register.html" class="button">Create An Account</a> -->
                 <%= link_to "Create An Account", new_user_registration_path, class: "button" %>
+            </div>
+
+            <div class="clearfix"></div>
         </div>
-        <div class="clearfix"></div>
+
     </div>
 </div>
 
