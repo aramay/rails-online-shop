@@ -28,12 +28,12 @@ Product.create("name":"NIKE METCON 2 'MELTDOWN'","description":%Q{Seamlessly des
 
 Product.create("name":"NIKE ZOOM TRAIN COMPLETE","description":%Q{Seamlessly designed with support and breathability right where you need it, the Nike Running Shoe features a Flymesh upper combined with the plush cushioning of a full-length Max Air unit.},"image":"https://archive.org/download/kasper_341_hotmail_F-l/grid3.jpg","price":100.11,"quantity":1)
 
+CategoryProduct.create(category_id:1, product_id:4)
 CategoryProduct.create(category_id:1, product_id:2)
 CategoryProduct.create(category_id:1, product_id:3)
-CategoryProduct.create(category_id:1, product_id:4)
 
-CategoryProduct.create(category_id:2, product_id:5)
 CategoryProduct.create(category_id:2, product_id:6)
+CategoryProduct.create(category_id:2, product_id:5)
 CategoryProduct.create(category_id:2, product_id:1)
 
 CategoryProduct.create(category_id:3, product_id:3)
