@@ -27,6 +27,23 @@ p#notice {
 	font-size: 20px;
 }
 
+.style-as-link {
+	width: 100%;
+    background: #100b0b;
+    color: #fff;
+    font-family: 'Pathway Gothic One';
+    font-size: 18px;
+    border: none;
+    border-radius: 0;
+}
+
+.btn:hover{
+	background: #fa5400;
+    color: #fff;
+    border: none;
+    transition: 0.5s all;
+}
+
 .header-top{
     position: relative;
     padding: 0;
