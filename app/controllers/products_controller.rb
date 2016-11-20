@@ -6,10 +6,14 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    @categories = Category.all
+
+    #get random category ID to display as "products you may like"
+    @category = get_random_category
     # @order_item = current_order.order_items.new
 
     @cart = current_cart
+
+    # binding.pry
   end
 
   def show
@@ -18,6 +22,7 @@ class ProductsController < ApplicationController
     p find_product
     # binding.pry
     # @order_item = current_order.order_items.new
+    @category = get_random_category
   end
 
   def new
@@ -68,5 +73,13 @@ private
   def find_product
     @product = Product.find(params[:id])
     session[:product_id] = @product.id
+  end
+
+  def get_random_category
+
+      category = Category.all
+
+      rand_category_id = Category.find(rand(1..category.length - 1))
+
   end
 end
