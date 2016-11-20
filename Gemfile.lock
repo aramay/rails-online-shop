@@ -276,7 +276,7 @@ DEPENDENCIES
   pry-rails
   rails
   rails_12factor
-  rails_admin (~> 1.0)
+  rails_admin
   rspec-rails
   sass-rails (~> 5.0, >= 5.0.4)
   selenium-webdriver

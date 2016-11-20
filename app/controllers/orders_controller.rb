@@ -12,14 +12,15 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
-p "*" * 8
-p params
-p "*" * 8
-p session[:product_id]
-# binding.pry
+    p "*" * 8
+    p params
+    p "*" * 8
+    p session[:product_id]
+    # binding.pry
 
-p "*" * 8
+    p "*" * 8
       @cart = current_cart
+
       if @cart.line_items.empty?
 
           product = Product.find(session[:product_id])
@@ -54,7 +55,11 @@ p "*" * 8
             Cart.destroy(session[:cart_id])
             session[:cart_id] = nil
 
-            format.html { redirect_to @order, notice: "Thank you for your order" }
+            # format.html { redirect_to @order, notice: "Thank you for your order" }
+
+            # Temporarily redirect_to to root_path
+
+            format.html { redirect_to root_path, notice: "Thank you for your order" }
             format.json { render json: @order, status: :created, location: order }
 
             #   redirect_to @order, notice: 'Order was successfully created.'
