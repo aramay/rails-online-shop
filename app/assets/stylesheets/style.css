@@ -1072,7 +1072,7 @@ input#amount {
     font-weight: bold;
     text-align: left;
 }
-.reg form input[type="text"], .reg form input[type="password"] {
+.reg form input[type="text"],.reg form input[type="email"], .reg form input[type="password"] {
     width: 50%;
     padding: 8px;
     font-size: 14px;
