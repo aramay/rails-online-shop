@@ -1,0 +1,7 @@
+bundle exec rake assets:precompile
+
+RAILS_ENV=production bundle exec rake assets:precompile
+
+After I push to heroku, I would run:
+
+heroku run rake assets:precompile
