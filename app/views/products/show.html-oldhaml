@@ -1,21 +1,118 @@
-=link_to "Home", root_path
-#li
-  %h3
-    %strong
-      #span= @product.name
-=image_tag("#{@product.image}")
-#li
-  %strong Price:
-#span= number_to_currency(@product.price)
-#li
-  %strong Description:
-#span= @product.description
-#li
-  %strong Quantity:
-#span= @product.quantity
-#li
-  %strong Category:
+<div class="showcase-grid">
+    <div class="container">
+        <div class="col-md-8 showcase">
+            <div class="flexslider">
+                  <ul class="slides">
+                    <li data-thumb="images/show.jpg">
+                        <div class="thumb-image">
+                            <!-- <img src="images/show.jpg" data-imagezoom="true" class="img-responsive"> -->
+                            <%= image_tag "show.jpg", data_imagezoom: "true", class: "img-responsive"%>
 
-- @product.categories.each do |c|
-  = c.name
-  %br
+                        </div>
+                    </li>
+                    <!-- <li data-thumb="images/show1.jpg"> -->
+                    <li>
+
+                        <%=image_path("show1.jpg") %>
+                    <!-- <%= image_tag "show1.jpg"%> -->
+                         <div class="thumb-image">
+                             <%= image_tag "show1.jpg", data_imagezoom: "true", class: "img-responsive"%>
+                         </div>
+                    </li>
+                    <li data-thumb="images/show2.jpg">
+                       <div class="thumb-image">
+                           <%= image_tag "show2.jpg", data_imagezoom: "true", class: "img-responsive"%>
+                       </div>
+                    </li>
+                    <li data-thumb="images/show3.jpg">
+                       <div class="thumb-image">
+                           <%= image_tag "show.jpg", data_imagezoom: "true", class: "img-responsive"%>
+                       </div>
+                    </li>
+                  </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="col-md-4 showcase">
+            <div class="showcase-rt-top">
+                <div class="pull-left shoe-name">
+                    <h3><%= @product.name %></h3>
+                    <p>Men's running shoes</p>
+                    <!-- <h4>&#36;<%@product.price%></h4> -->
+                    <h4><%=number_to_currency(@product.price)%></h4>
+                </div>
+                <div class="pull-left rating-stars">
+                    <ul>
+<li><a href="#" class="active"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
+<li><a href="#" class="active"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
+<li><a href="#" class="active"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
+<li><a href="#"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
+<li><a href="#"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="shocase-rt-bot">
+                <div class="float-qty-chart">
+                <ul>
+                    <li class="qty">
+                        <h3>Size Chart</h3>
+                        <select class="form-control siz-chrt">
+                          <option>6 US</option>
+                          <option>7 US</option>
+                          <option>8 US</option>
+                          <option>9 US</option>
+                          <option>10 US</option>
+                          <option>11 US</option>
+                        </select>
+                    </li>
+                    <li class="qty">
+                        <h4>QTY</h4>
+                        <select class="form-control qnty-chrt">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+                </div>
+                <ul>
+                    <li class="ad-2-crt simpleCart_shelfItem">
+
+                        <!-- <%= link_to line_items_path(product_id: @product), {:action => :create}, method: :post, class: "btn item_add", role: "button"  do %>
+                        Add To Cart
+                        <% end %> -->
+
+                        <%= button_to 'Add To Cart', line_items_path(product_id: @product), id: "add-to-cart", class: "btn item_add style-as-link", role: "button", remote: true %>
+                    </a>
+                        <!-- <a class="btn" href="#" role="button">Buy Now</a> -->
+
+                        <%= link_to new_order_path, method: :get, class: "btn" do %>
+                        Buy Now
+                        <% end %>
+                    </li>
+                </ul>
+            </div>
+            <div class="showcase-last">
+                <h3>product details</h3>
+                <ul>
+                    <!-- <li>Internal bootie wraps your foot for a sock-like fit</li>
+<li>Unique eyestays work with the Flywire cables to create an even better glove-like fit</li>
+                    <li>Waffle outsole for durability and multi-surface traction</li>
+<li>Sculpted Cushlon midsole combines plush cushioning and springy resilience for impact protection</li>
+                    <li>Midsole flex grooves for greater forefoot flexibility</li> -->
+                    <li>
+                        <%= @product.description %>
+                    </li>
+                </ul>
+            </div>
+        </div>
+<div class="clearfix"></div>
+    </div>
+</div>
