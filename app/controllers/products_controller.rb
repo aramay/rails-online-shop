@@ -23,6 +23,8 @@ class ProductsController < ApplicationController
     # binding.pry
     # @order_item = current_order.order_items.new
     @category = get_random_category
+
+    @cart = current_cart
   end
 
   def new
