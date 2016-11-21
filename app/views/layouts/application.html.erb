@@ -94,9 +94,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <%end%>
 
                         <!-- Cart div start -->
+                        <div>
 
+                            <!-- <%= debug(@cart) %> -->
+                        </div>
                         <div id="cart" class="cart box_1">
-                            <a href="checkout.html">
+                            <% unless current_cart.line_items.empty? %>
+                                <div class="total">
+                                    <!-- cart not empty -->
+                                    <!-- <span class="simpleCart_total"> -->
+                                    </span>
+                                    <%= render @cart %>
+                                </div class="total">
+                            <% else %>
+                                <div class="quantity">
+                                    (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)
+                                </div>
+                            <% end %>
+
+                            <a href="#">Checkout
                             <h3>
                                 <!-- <div class="total">
 
