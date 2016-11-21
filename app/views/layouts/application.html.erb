@@ -107,12 +107,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <%= render @cart %>
                                 </div class="total">
                             <% else %>
-                                <div class="quantity">
+                                <!-- <div class="quantity">
                                     (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)
-                                </div>
+                                </div> -->
                             <% end %>
 
-                            <a href="#">Checkout
+                            <%= link_to new_order_path,method: :get, class: "btn" do %>
+                            Buy Now
+                            <% end %>
+
+                            <a href="#">
                             <h3>
                                 <!-- <div class="total">
 
