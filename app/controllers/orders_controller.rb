@@ -65,6 +65,7 @@ class OrdersController < ApplicationController
             #   redirect_to @order, notice: 'Order was successfully created.'
         else
             @cart = current_cart
+            flash[:error] = @order.errors.full_messages.to_sentence
             format.html { render action: "new" }
             format.json { render json: @order.erros, status: "unprocessable_entity" }
             #   render :new
