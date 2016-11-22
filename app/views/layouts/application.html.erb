@@ -97,8 +97,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                         <div id="cart" class="cart box_1">
 
-                            <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
-                                <%= render @cart %>
+                            <%= hidden_div_if(current_cart.line_items.empty?, id: 'cart') do %>
+                                <% if @cart %>
+                                    <%= render @cart %>
+                                <% end %>
                             <% end %>
 
                             <div class="clearfix"> </div>
