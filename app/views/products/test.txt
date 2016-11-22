@@ -1,0 +1,83 @@
+<section class="slider">
+<div id="slider" class="flexslider">
+  <ul class="slides">
+    <li>
+        <!-- <img src="images/show.jpg" /> -->
+        <%= image_tag "show.jpg", class: "img-rsponsive fl-img-wid"%>
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_lemon.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_donut.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_caramel.jpg" />
+        </li>
+    <li>
+        <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_lemon.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_donut.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_caramel.jpg" />
+        </li>
+    <li>
+        <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_lemon.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_donut.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_caramel.jpg" />
+        </li>
+  </ul>
+</div>
+<div id="carousel" class="flexslider">
+  <ul class="slides">
+    <li>
+        <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_lemon.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_donut.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_caramel.jpg" />
+        </li>
+    <li>
+        <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_lemon.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_donut.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_caramel.jpg" />
+        </li>
+    <li>
+        <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_lemon.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_donut.jpg" />
+        </li>
+        <li>
+        <img src="images/kitchen_adventurer_caramel.jpg" />
+        </li>
+  </ul>
+</div>
+</section>
