@@ -1,0 +1,32 @@
+<% unless current_cart.line_items.empty? %>
+    <div class="total">
+        <!-- cart not empty -->
+        <!-- <span class="simpleCart_total">
+        </span>-->
+        <% if @cart %>
+            <%= render @cart %>
+        <% end %>
+    </div>
+
+    <%= link_to new_order_path,method: :get, class: "btn" do %>
+    Buy Now
+    <% end %>
+
+<% else %>
+    <!-- <div class="quantity">
+        (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)
+    </div> -->
+<% end %>
+
+<!-- <a href="javascript:;" class="simpleCart_empty">Empty Cart</a> -->
+
+<!-- <div class="total">
+
+    <span class="simpleCart_total">
+    </span>
+
+    (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)
+</div> -->
+
+
+<!-- <%= button_to "Empty Cart", @cart, method: :delete, class: "simpleCart_empty" %>Empty Cart</a> -->
