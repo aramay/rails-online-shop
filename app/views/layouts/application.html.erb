@@ -94,52 +94,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <%end%>
 
                         <!-- Cart div start -->
-                        <div>
 
-                            <!-- <%= debug(@cart) %> -->
-                        </div>
                         <div id="cart" class="cart box_1">
-                            <% unless current_cart.line_items.empty? %>
-                                <div class="total">
-                                    <!-- cart not empty -->
-                                    <!-- <span class="simpleCart_total">
-                                    </span>-->
-                                    <% if @cart %>
-                                        <%= render @cart %>
-                                    <% end %>
-                                </div>
 
-                                <%= link_to new_order_path,method: :get, class: "btn" do %>
-                                Buy Now
-                                <% end %>
-
-                            <% else %>
-                                <!-- <div class="quantity">
-                                    (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)
-                                </div> -->
+                            <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+                                <%= render @cart %>
                             <% end %>
 
-
-                            <a href="#">
-                            <h3>
-                                <!-- <div class="total">
-
-                                    <span class="simpleCart_total">
-                                    </span>
-
-                                    (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)
-                                </div> -->
-                            </h3>
-
-                            </a>
-
-                            <p>
-                                <!-- <a href="javascript:;" class="simpleCart_empty">Empty Cart</a> -->
-                                <%= session[:cart_id] %>
-
-                                    <!-- <%= button_to "Empty Cart", @cart, method: :delete, class: "simpleCart_empty" %>Empty Cart</a> -->
-
-                            </p>
                             <div class="clearfix"> </div>
                         </div>
                         <!-- Cart div end -->
