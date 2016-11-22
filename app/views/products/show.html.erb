@@ -17,28 +17,33 @@
                 <div class="col-md-8 showcase">
                     <div class="flexslider">
                           <ul class="slides">
-                            <li data-thumb="images/show.jpg">
+
+
+                            <!-- <li data-thumb=asset_url('show.jpg', image)> -->
+                            <li data-thumb= "">
                                 <div class="thumb-image">
                                     <!-- <img src="images/show.jpg" data-imagezoom="true" class="img-responsive"> -->
                                     <%= image_tag "show.jpg", data_imagezoom: "true", class: "img-responsive"%>
 
                                 </div>
                             </li>
-                            <!-- <li data-thumb="images/show1.jpg"> -->
-                            <li>
+                            <li data-thumb= "">
+                            <% image_tag 'logo.png' %>
 
                                 <%=image_path("show1.jpg") %>
-                            <!-- <%= image_tag "show1.jpg"%> -->
                                  <div class="thumb-image">
                                      <%= image_tag "show1.jpg", data_imagezoom: "true", class: "img-responsive"%>
                                  </div>
                             </li>
-                            <li data-thumb="images/show2.jpg">
+
+                            <li data-thumb="">
                                <div class="thumb-image">
                                    <%= image_tag "show2.jpg", data_imagezoom: "true", class: "img-responsive"%>
                                </div>
                             </li>
-                            <li data-thumb="images/show3.jpg">
+
+                            <!-- <li data-thumb = asset_path("logo.png", image)> -->
+                            <li data-thumb = "">
                                <div class="thumb-image">
                                    <%= image_tag "show.jpg", data_imagezoom: "true", class: "img-responsive"%>
                                </div>
@@ -130,6 +135,7 @@
         <div class="clearfix"></div>
             </div>
         </div>
+
 
         <div class="specifications">
             <div class="container">

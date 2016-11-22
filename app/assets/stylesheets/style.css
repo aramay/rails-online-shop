@@ -634,7 +634,14 @@ ol.breadcrumb li a:hover{
 }
 .flex-control-thumbs li {
     width: 24% !important;
+	display: none;
+
 }
+
+.flex-direction-nav {
+	display: none;
+}
+
 .shoe-name h3,.shoe-name h4 {
     text-transform: uppercase;
     font-weight: bold;
