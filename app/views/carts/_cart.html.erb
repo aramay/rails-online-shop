@@ -1,21 +1,8 @@
-<!-- <div  class="">
+<span class="simpleCart_total">
 
-    <%= @cart.total_price %>
+    <%= number_to_currency(@cart.total_price )%>
 
-
-</div> -->
-<!-- <%= button_to "Empty Cart", @cart, method: :delete, class: "simpleCart_empty" %> -->
-
-<%= number_to_currency(@cart.total_price )%>
-
-<!-- <div class="total">
-
-
-    <span class="simpleCart_total">
-        <%= number_to_currency(@cart.total_price )%>
-    </span>
-
-    (<span id="simpleCart_quantity" class="simpleCart_quantity">
-
-    </span>)
-</div> -->
+    <%= link_to new_order_path,method: :get, class: "btn" do %>
+    Buy Now
+    <% end %>
+</span>
