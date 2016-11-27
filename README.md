@@ -8,8 +8,9 @@ DEMO URL: [DEMO](https://boiling-waters-38232.herokuapp.com/)
     - Reviewing orders.
 
 ### Site ScreenShots
-    #### Index page
-    [I'm a relative reference to a repository file](app/assests/images/index_screenshot_desktop.png)
+
+* Index page
+[I'm a relative reference to a repository file](app/assests/images/index_screenshot_desktop.png)
 
 <img src="http://i.imgur.com/jnFu4eLg.jpg" alt="mock ups" width="400" height="500">
 
