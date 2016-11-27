@@ -10,9 +10,7 @@ DEMO URL: [DEMO](https://boiling-waters-38232.herokuapp.com/)
 ### Site ScreenShots
 
 * Index page
-![alt text](app/assests/images/index_screenshot_desktop.png "Logo Title Text 1")
-
-<img src="http://i.imgur.com/jnFu4eLg.jpg" alt="mock ups" width="400" height="500">
+![alt text](https://github.com/aramay/rails-online-shop/blob/master/app/assets/images/index_screenshot_desktop.png "Landing Page")
 
 ### SCHEMA
 
