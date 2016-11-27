@@ -1,10 +1,15 @@
 ## Hamazon
-URL: https://hamazon-dbc-nighthawks-16.herokuapp.com/
+URL: https://boiling-waters-38232.herokuapp.com/
 
 ## Description
-- Rails-based Online Shop
+- Rails-based Online Shop. A user can complete end-to-end flow and place an order online.
+- A backend for site administration.
+    - Updating products.
+    - Reviewing orders.
 
-### MOCK UPS
+### Site ScreenShots
+    #### Index page
+    [I'm a relative reference to a repository file](app/assests/images/index_screenshot_desktop.png)
 
 <img src="http://i.imgur.com/jnFu4eLg.jpg" alt="mock ups" width="400" height="500">
 
@@ -34,5 +39,3 @@ URL: https://hamazon-dbc-nighthawks-16.herokuapp.com/
 - Product show page includes categories :heavy_check_mark:
 
 ### Iteration 3.1
-- New development team
-- Chris, Abid, Paul, Michael
