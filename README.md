@@ -10,7 +10,7 @@ DEMO URL: [DEMO](https://boiling-waters-38232.herokuapp.com/)
 ### Site ScreenShots
 
 * Index page
-[I'm a relative reference to a repository file](app/assests/images/index_screenshot_desktop.png)
+![alt text](app/assests/images/index_screenshot_desktop.png "Logo Title Text 1")
 
 <img src="http://i.imgur.com/jnFu4eLg.jpg" alt="mock ups" width="400" height="500">
 
