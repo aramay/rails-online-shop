@@ -1,4 +1,4 @@
-## Hamazon
+## Rails Online Shop
 URL: https://boiling-waters-38232.herokuapp.com/
 
 ## Description
