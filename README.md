@@ -1,5 +1,5 @@
 ## Rails Online Shop
-URL: https://boiling-waters-38232.herokuapp.com/
+DEMO URL: [DEMO](https://boiling-waters-38232.herokuapp.com/)
 
 ## Description
 - Rails-based Online Shop. A user can complete end-to-end flow and place an order online.
