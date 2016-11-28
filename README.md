@@ -10,7 +10,7 @@ DEMO URL: [DEMO](https://boiling-waters-38232.herokuapp.com/)
 ### Site ScreenShots
 
 * Index page
-![alt text](https://github.com/aramay/rails-online-shop/blob/master/app/assets/images/index_screenshot_desktop.png "Landing Page")
+![alt text](http://recordit.co/avGpIHIjo5 "Landing Page")
 
 ### SCHEMA
 
