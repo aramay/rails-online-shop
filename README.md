@@ -9,15 +9,12 @@ DEMO URL: [DEMO](https://boiling-waters-38232.herokuapp.com/)
 
 ### Site Desktop View
 
-* Desktop Workflow
 ![alt text](app/assets/images/site_workflow_desktop.gif)
 
 ### Site Mobile View
 
-* Mobile Workflow
 ![alt text](app/assets/images/site_mobile_workflow.gif)
 
 ### Site Admin View
 
-* Admin Workflow
-![alt text](app/assets/images/site_mobile_workflow.gif)
+![alt text](app/assets/images/site_admin_workflow.gif)
