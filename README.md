@@ -17,4 +17,11 @@ DEMO URL: [DEMO](https://boiling-waters-38232.herokuapp.com/)
 
 ### Site Admin View
 
+* To access Admin View, authenticate as Admin
+  1. Got to [Sign In](https://boiling-waters-38232.herokuapp.com/users/sign_in)
+  2. username: tim@tim.com / password: timtimtim
+  3. Got to [Admin](https://boiling-waters-38232.herokuapp.com/admin)
+
+
+
 ![alt text](app/assets/images/site_admin_workflow.gif)
