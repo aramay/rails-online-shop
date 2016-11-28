@@ -14,7 +14,7 @@ DEMO URL: [DEMO](https://boiling-waters-38232.herokuapp.com/)
 
 * Mobile Workflow
 ### Site Mobile View
-![alt text](app/assets/images/mobile_workflow_desktop.gif "Mobile Workflow")
+![alt text](app/assets/images/site_mobile_workflow.gif "Mobile Workflow")
 
 ### SCHEMA
 
