@@ -10,7 +10,7 @@ DEMO URL: [DEMO](https://boiling-waters-38232.herokuapp.com/)
 ### Site ScreenShots
 
 * Index page
-![alt text](app/assests/images/site_workflow_desktop.gif "Landing Page")
+![alt text](app/assets/images/site_workflow_desktop.gif "Landing Page")
 
 ### SCHEMA
 
