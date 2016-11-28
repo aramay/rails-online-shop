@@ -1,5 +1,5 @@
-## Hamazon
-URL: https://boiling-waters-38232.herokuapp.com/
+## Rails Online Shop
+DEMO URL: [DEMO](https://boiling-waters-38232.herokuapp.com/)
 
 ## Description
 - Rails-based Online Shop. A user can complete end-to-end flow and place an order online.
@@ -8,10 +8,9 @@ URL: https://boiling-waters-38232.herokuapp.com/
     - Reviewing orders.
 
 ### Site ScreenShots
-    #### Index page
-    [I'm a relative reference to a repository file](app/assests/images/index_screenshot_desktop.png)
 
-<img src="http://i.imgur.com/jnFu4eLg.jpg" alt="mock ups" width="400" height="500">
+* Index page
+![alt text](http://recordit.co/avGpIHIjo5 "Landing Page")
 
 ### SCHEMA
 
