@@ -7,10 +7,14 @@ DEMO URL: [DEMO](https://boiling-waters-38232.herokuapp.com/)
     - Updating products.
     - Reviewing orders.
 
-### Site ScreenShots
+### Site Desktop View
 
-* Index page
-![alt text](app/assets/images/site_workflow_desktop.gif "Landing Page")
+* Desktop Workflow
+![alt text](app/assets/images/site_workflow_desktop.gif "Desktop Workflow")
+
+* Mobile Workflow
+### Site Mobile View
+![alt text](app/assets/images/mobile_workflow_desktop.gif "Mobile Workflow")
 
 ### SCHEMA
 
