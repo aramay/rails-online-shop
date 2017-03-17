@@ -1,8 +1,10 @@
 require 'rails_helper'
+require 'spec_helper'
+
 
 RSpec.describe Product, type: :model do
   describe "Product Model" do
-    let!(:product) {build :product}
+    let!(:product) {FactoryGirl.build :product}
       context "validations" do
         it { should validate_presence_of :name}
         it { should validate_presence_of :description}
