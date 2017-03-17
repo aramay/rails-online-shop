@@ -1,3 +1,5 @@
+require 'faker'
+
 FactoryGirl.define do
   factory :order do
     name "MyString"
@@ -5,6 +7,15 @@ FactoryGirl.define do
     email "MyString"
     pay_type "MyString"
   end
+
+  factory :product do |p|
+    p.name {Faker::Beer.name}
+    p.description {Faker::Beer.style}
+    p.price {Faker::Commerce.price}
+    p.quantity {1}
+    p.image {Faker::Placeholdit.image("50x50")}
+  end
+
   # factory :order do
   #   name "MyString"
   #   address "MyText"
@@ -53,14 +64,6 @@ FactoryGirl.define do
     email { "tom@tom.com" }
     password { "tomtomtom" }
 
-  end
-
-  factory :product do
-    name {Faker::Beer.name}
-    description {Faker::Beer.style}
-    price {Faker::Commerce.price}
-    quantity {1}
-    image {Faker::Placeholdit.image("50x50")}
   end
 
 end
